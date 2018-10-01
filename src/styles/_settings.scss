@@ -1,0 +1,31 @@
+// This file is to store mixins and variables we want to use in own sources
+@mixin show-for-js {
+	// this module works only with JS
+	position: absolute;
+	opacity: 0;
+	transition: opacity 1s;
+	visibility: hidden;
+	@at-root .js & {
+		position: static;
+		opacity: 1;
+		visibility: visible;
+	}
+}
+@mixin hide-for-js {
+    // this module does not works with JS
+	opacity: 1;
+	transition: opacity 1s;
+	visibility: visible;
+	position: static;
+	@at-root .js & {
+		position: absolute;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+// $slick-map: (
+// 	xlarge: xlarge only,
+// 	large: large only,
+// 	medium: medium only,
+// 	small: small only
+// );

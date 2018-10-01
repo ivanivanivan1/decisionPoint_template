@@ -1,0 +1,75 @@
+@mixin foundation-components {
+	// @if $flex {
+		$global-flexbox: true !global;
+	// }
+	@include foundation-global-styles;
+	// @if not $flex {
+	//	@include foundation-grid;
+	// }
+	// @else {
+	//	@if $xy-grid {
+			@include foundation-xy-grid-classes;
+		// }
+		// @else {
+		//	@include foundation-flex-grid;
+		// }
+	// }
+	@include foundation-typography;
+	// @include foundation-forms;
+	@include foundation-button;
+	.button {
+		&,
+		&.primary {
+			background-image: linear-gradient(270deg, hsl(53, 100%, 50%) 15.35%, hsl(43, 100%, 50%) 91.8%);
+			box-shadow: 0 10px 10px rgba(black, 0.05);
+			opacity: 1;
+			transition: opacity 0.3s, box-shadow 0.5s;
+			&,
+			&:hover {
+				color: black;
+			}
+			&:hover {
+				opacity: 0.8;
+				box-shadow: 0 5px 20px rgba(black, 0.2);
+			}
+		}
+	}
+	// @include foundation-accordion;
+	// @include foundation-accordion-menu;
+	// @include foundation-badge;
+	// @include foundation-breadcrumbs;
+	// @include foundation-button-group;
+	// @include foundation-callout;
+	// @include foundation-card;
+	// @include foundation-close-button;
+	// @include foundation-menu;
+	// @include foundation-menu-icon;
+	// @include foundation-drilldown-menu;
+	// @include foundation-dropdown;
+	// @include foundation-dropdown-menu;
+	// @include foundation-responsive-embed;
+	// @include foundation-label;
+	// @include foundation-media-object;
+	// @include foundation-off-canvas;
+	// @include foundation-orbit;
+	// @include foundation-pagination;
+	// @include foundation-progress-bar;
+	// @include foundation-slider;
+	// @include foundation-sticky;
+	// @include foundation-reveal;
+	// @include foundation-switch;
+	// @include foundation-table;
+	// @include foundation-tabs;
+	// @include foundation-thumbnail;
+	// @include foundation-title-bar;
+	// @include foundation-tooltip;
+	// @include foundation-top-bar;
+	@include foundation-visibility-classes;
+	// @include foundation-float-classes;
+	// @if $flex {
+		@include foundation-flex-classes;
+	// }
+	// @if $prototype {
+	//	@include foundation-prototype-classes;
+	// }
+}

@@ -1,0 +1,39 @@
+.siteNav
+    background: $secondary-color
+    transition: transform .15s
+    @include breakpoint (medium down)
+        transform: scaleY(0)
+        transform-origin: top
+    &_open
+        border-bottom: 1px solid hsl(210, 2%, 80%)
+        transform: scaleY(1)
+        // #sb-search
+            // display: initial
+        // position: absolute
+        width: 100%
+    &-menu
+        display: flex
+        list-style: none
+        margin: 1.75rem 0 1.75rem
+        padding: 0
+        li
+            a
+                border-bottom: 1px solid transparent
+                color: hsl(221, 44%, 41%)
+                font: bold 0.875rem PT Sans
+                transition: color .3s, border-bottom .2s
+                text-transform: uppercase
+                &:hover
+                    border-bottom: 1px solid hsl(221, 44%, 41%)
+                    color: darken(#3b5998, 20)
+        li + li
+            margin-left: 50px
+        @include breakpoint(medium down)
+            flex-direction: column
+            margin: 0
+            padding: 10px 0
+            li
+                display: block
+                text-align: center
+            li + li
+                margin: 0

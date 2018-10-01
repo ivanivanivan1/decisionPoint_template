@@ -1,0 +1,100 @@
+.siteHeader
+    background: #fff
+    border-bottom: 1px solid hsl(210, 2%, 80%)
+    overflow: hidden
+    padding: 7px 0 9px
+    pointer-events: all
+    &-wrapper
+        @include breakpoint(medium down)
+            pointer-events: none
+            position: fixed
+            top: 0
+            width: 100%
+            z-index: 100
+    &-logo
+        margin-right: 15px
+        @media (max-width: 500px)
+            margin-right: 0
+            width: 40px
+    &-companyTitle
+        color: $primary-color
+        font-size: 1.5rem
+        font-weight: bold
+        text-transform: uppercase
+        @media (max-width: 760px)
+            display: none
+    &-companyService
+        color: hsl(0, 0%, 41%)
+        margin-top: 3px
+        @media (max-width: 760px)
+            display: none
+    &-siteInfo
+        line-height: 1
+    &-phone
+        color: hsl(221, 44%, 41%)
+        font-size: 1.5rem
+        font-weight: bold
+        margin-right: 25px
+        pointer-events: all
+        transition: color .3s
+        &:hover
+            color: hsl(221, 44%, 31%)
+        &::before
+            content: url(../img/phone.png)
+            height: 14px
+            margin-right: 7px
+            width: 14px
+            @media (max-width: 580px)
+                content: ''
+                height: 0
+                width: 0
+        @media (max-width: 500px)
+            font-size: 1.25rem
+            margin-right: 0
+        @media (max-width: 580px)
+            margin-right: 37px
+            position: relative
+            &::after
+                background: hsl(210, 2%, 80%)
+                content: ''
+                display: block
+                height: 500%
+                right: -15px
+                position: absolute
+                top: -150%
+                width: 1px
+        @media (max-width: 310px)
+            font-size: 1.15rem
+            margin-right: 27px
+    &-callBack
+        border: 1px solid hsl(37, 100%, 65%)
+        border-radius: 10px
+        color: hsl(37, 100%, 65%)
+        font-size: 0.9375rem
+        font-weight: bold
+        margin-right: 33px
+        padding: 15px 32px
+        pointer-events: all
+        position: relative
+        transition: background .3s, color .3s
+        &:focus
+            color: hsl(37, 100%, 65%)
+        &:visited
+            color: hsl(37, 100%, 65%)
+        &:hover, &:active
+            background: hsl(37, 100%, 65%)
+            color: white
+        @media (max-width: 580px)
+            display: none
+        @include breakpoint(large up)
+            margin-right: 0
+        @include breakpoint(medium down)
+            &::after
+                background: hsl(210, 2%, 80%)
+                content: ''
+                display: block
+                height: 200%
+                right: -15px
+                position: absolute
+                top: -50%
+                width: 1px

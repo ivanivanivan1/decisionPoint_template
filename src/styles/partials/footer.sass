@@ -1,0 +1,74 @@
+.siteFooter
+    background: hsl(216, 10%, 30%)
+    overflow: hidden
+    padding-bottom: 20px
+    @include breakpoint(small only)
+        padding-bottom: 38px
+    &-links
+        @include breakpoint(small only)
+            line-height: 2.2
+    &-about
+        @include breakpoint(small only)
+            margin-top: 35px
+    &-policyBlock
+        @include breakpoint(small only)
+            margin-top: 22px
+    &-addressBlock
+        @include breakpoint(small only)
+            margin-top: 28px
+    &-timeWorkingBlock
+        @include breakpoint(small only)
+            display: none
+    &-blockTitle
+        color: hsla(0, 0%, 100%, 0.5)
+        font-size: 0.875rem
+        font-weight: bold
+        line-height: 1
+        margin-bottom: 8px
+        text-transform: uppercase
+    &-blockText
+        color: white
+        font-size: 1rem
+        a
+            border-bottom: 1px solid transparent
+            color: white
+            transition: border-bottom .3s, color .3s
+            &:hover
+                border-bottom: 1px solid hsl(37, 100%, 65%)
+                color: hsl(37, 100%, 65%)
+    &-policy
+        a
+            border-bottom: 1px solid white
+    &-top
+        padding: 70px 0 100px
+        @include breakpoint(small only)
+            margin-bottom: 38px
+            padding: 38px 0
+    &-bottom
+        // margin-top: 40px
+        padding-bottom: 65px
+        position: relative
+        @include breakpoint(small only)
+            padding-bottom: 30px
+        &::before
+            background: hsl(219, 7%, 37%)
+            content: ''
+            display: block
+            height: 1px
+            left: -100%
+            margin-top: -40px
+            position: absolute
+            top: 0
+            width: 300%
+            @include breakpoint(small only)
+                margin-top: -38px
+    &-bottomContent
+        @include breakpoint(small only)
+            justify-content: left
+    &-copyright
+        color: hsla(0, 0%, 100%, 0.5)
+        font-size: 0.75rem
+        font-weight: bold
+        text-transform: uppercase
+    &-nowrap
+        white-space: nowrap

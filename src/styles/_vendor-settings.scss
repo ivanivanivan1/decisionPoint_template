@@ -1,0 +1,16 @@
+// This file is to tune vendor sources
+// In Sass, you can set variable with `!default` flag to allow to change it later
+// So, is you include vendor sources with some variables, you can change it before include
+$body-font-family: 'PT Sans', sans-serif;
+$button-radius: 4px;
+$foundation-palette: (
+	primary: hsl(221, 44%, 41%),
+	accent: hsl(37, 100%, 65%),
+	secondary: hsl(210, 11%, 96%),
+	success: hsl(142, 69%, 54%),
+	warning: hsl(63, 76%, 50%),
+	alert: hsl(8, 59%, 51%),
+	dark-primary: hsl(211, 45%, 17%),
+);
+
+$breakpoint-classes: (small medium large xlarge);

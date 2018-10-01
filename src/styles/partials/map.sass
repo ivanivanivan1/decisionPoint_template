@@ -1,0 +1,52 @@
+.map
+    height: 640px
+    position: relative
+    @include breakpoint(medium down)
+        height: 320px
+    &-container
+        height: 640px
+        @include breakpoint(medium down)
+            height: 320px
+        z-index: 5
+    &-info
+        bottom: 90px
+        left: 50%
+        line-height: 1
+        pointer-events: none
+        position: absolute
+        transform: translateX(-50%)
+        width: 100%
+        z-index: 99
+        @include breakpoint(medium down)
+            display: none
+    &-infoWrapper
+        background: #efefefcc
+        border: 1px solid hsl(0, 0%, 74%)
+        display: inline-block
+        padding: 15px
+    &-label
+        color: hsl(0, 0%, 41%)
+        display: inline-block
+        font-size: 1.125rem
+        margin: 0
+        padding: 0
+    &-phone
+        color: hsl(221, 44%, 41%)
+        display: inline-block
+        font-size: 2.875rem
+        font-weight: bold
+        margin-bottom: 20px
+        margin-top: 10px
+        pointer-events: all
+        a
+            transition: color .3s
+            &:hover
+                color: hsl(221, 44%, 31%)
+    &-address
+        color: #000
+        display: inline-block
+        cursor: pointer
+        font-size: 1.625rem
+        font-weight: bold
+        margin: 6px 0
+        pointer-events: all
