@@ -50,6 +50,8 @@ function getFoundationBreakpointInPixels(name) {
 }
 
 function initYandexMaps(where) {
+    var zoom = 17,
+        coords = [59.985485, 30.307600]
     // Функция ymaps.ready() будет вызвана, когда
         // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
     ymaps.ready(init);
@@ -60,10 +62,10 @@ function initYandexMaps(where) {
             // Порядок по умолчнию: «широта, долгота».
             // Чтобы не определять координаты центра карты вручную,
             // воспользуйтесь инструментом Определение координат.
-            center: [59.985467, 30.308816],
+            center: coords,
             // Уровень масштабирования. Допустимые значения:
             // от 0 (весь мир) до 19.
-            zoom: 17,
+            zoom: zoom,
             controls: ['fullscreenControl'],
         });
 
@@ -71,7 +73,7 @@ function initYandexMaps(where) {
             '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
         )
 
-        var myPlacemark = new ymaps.Placemark([59.985467, 30.308816], {
+        var myPlacemark = new ymaps.Placemark(coords, {
             // Хинт показывается при наведении мышкой на иконку метки.
             hintContent: 'Нажмите, чтобы посмотреть контакты',
             // Балун откроется при клике по метке.
@@ -84,19 +86,29 @@ function initYandexMaps(where) {
             // Своё изображение иконки метки.
             iconImageHref: 'assets/img/logo.png',
             // Размеры метки.
-            //iconImageSize: [48, 48],
+            iconImageSize: [40, 50],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
-            iconImageOffset: [-24, -24],
+            // iconImageOffset: [-24, -24],
             // Смещение слоя с содержимым относительно слоя с картинкой.
-            iconContentOffset: [15, 15],
+            // iconContentOffset: [15, 15],
             // Макет содержимого.
             iconContentLayout: MyIconContentLayout,
+            hideIconOnBalloonOpen: false,
         });
         
         // После того как метка была создана, ее
         // можно добавить на карту.
-        myMap.geoObjects.add(myPlacemark);
+        myMap.geoObjects.add(myPlacemark)
+
+        $(where).find('[data-get-location-map]').each((index, element) => {
+            element.addEventListener('click', function() {
+
+                myMap.setCenter(coords, zoom, {
+                    duration: 200,
+                })
+            })
+        })
     }
 }
 
