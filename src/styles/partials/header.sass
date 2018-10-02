@@ -69,9 +69,10 @@
         @include breakpoint(medium down)
             text-decoration: underline        
     &-callBack
+        background: hsl(37, 100%, 65%)
         border: 1px solid hsl(37, 100%, 65%)
         border-radius: 10px
-        color: hsl(37, 100%, 65%)
+        color: white
         font-size: 0.9375rem
         font-weight: bold
         margin-right: 33px
@@ -80,12 +81,12 @@
         position: relative
         transition: background .3s, color .3s
         &:focus
-            color: hsl(37, 100%, 65%)
-        &:visited
-            color: hsl(37, 100%, 65%)
-        &:hover, &:active
-            background: hsl(37, 100%, 65%)
             color: white
+        &:visited
+            color: white
+        &:hover, &:active
+            background: transparent
+            color: hsl(37, 100%, 65%)
         @media (max-width: 580px)
             display: none
         @include breakpoint(large up)
