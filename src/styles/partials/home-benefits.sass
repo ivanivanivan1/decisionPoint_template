@@ -3,6 +3,7 @@
     @include breakpoint(medium down)
         padding-bottom: 20px
         padding-top: 30px
+        text-align: center
     @include breakpoint(small only)
         padding-bottom: 10px
         padding-top: 20px
@@ -25,3 +26,6 @@
         padding-right: 20px
         @media (max-width: 530px)
             font-size: 1.2rem
+        @include breakpoint(medium down)
+            margin: 20px auto 0
+            max-width: 300px
