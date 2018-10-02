@@ -1,6 +1,6 @@
 .searchContainer
     .grid-container
-        @include breakpoint(medium down)
+        @include breakpoint(small only)
             padding: 0 !important
 .navSearch
     backface-visibility: hidden
@@ -14,7 +14,7 @@
     &-form
         backface-visibility: hidden
         transition: width .3s
-        @include breakpoint(medium down)
+        @include breakpoint(small only)
             height: 100%
         &_open
             height: 100%
@@ -37,14 +37,14 @@
         transition: transform .2s
         width: 100%
         z-index: 10
-        @include breakpoint(medium down)
-            border-bottom: 1px solid #cbcccd
+        @include breakpoint(small only)
+            border-bottom: 1px solid hsl(210, 2%, 80%)
             height: 3rem
             padding-left: 0.9375rem
             position: static
             transform: scaleX(1)
     &-buttonWrapper
-        @include breakpoint(medium down)
+        @include breakpoint(small only)
             display: none
     &-button
         position: relative
@@ -53,4 +53,3 @@
         z-index: 6
         &_open
             right: 20px
-    

@@ -12,8 +12,8 @@
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
-    <header>
-        <div class="siteHeader-wrapper">
+    <header data-sticky-container>
+        <div class="siteHeader-wrapper sticky" data-sticky data-margin-top="0" data-sticky-on="small">
             <div class="siteHeader" id="siteHeader">
                 <div class="grid-container">
                     <div class="grid-x align-middle">
@@ -52,7 +52,7 @@
                 <div id="sb-search" class="searchContainer">
                     <div class="grid-container">
                         <div class="grid-x align-middle small-margin-collapse navSearch">
-                            <div class="cell small-order-2 expand large-auto">
+                            <div class="cell small-order-2 expand medium-auto">
                                 <ul class="siteNav-menu" data-smooth-scroll data-animation-duration="350" data-animation-easing="swing">
                                     <li><a href="#our-mission">Наша миссия</a></li>
                                     <li><a href="#jurists">Юристы</a></li>
@@ -61,10 +61,9 @@
                                     <li><a href="#address">Адрес офиса</a></li>
                                 </ul>
                             </div>
-                            <div class="cell small-order-1 large-shrink small-expand navSearch-form" id="search-form">
+                            <div class="cell small-order-1 medium-shrink small-expand navSearch-form" id="search-form">
                                 <form style="position: static; width: 100%; height: 100%">
-                                    <input class="navSearch-input" placeholder="Введите поисковой запрос..." type="search" value="" name="search" id="search" autocomplete="off">
-                                    <!-- <span class="sb-icon-search"></span> -->
+                                    <input class="navSearch-input" placeholder="Введите текст и нажмите Enter..." type="search" value="" name="search" id="search" autocomplete="off">
                                 </form>
                             </div>
                             <div class="cell small-order-3 shrink navSearch-buttonWrapper" id="search-button-wrapper">

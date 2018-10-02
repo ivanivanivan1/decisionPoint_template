@@ -11,8 +11,24 @@
             top: 0
             width: 100%
             z-index: 100
+        @include breakpoint(small down)
+            position: relative
+        &.is-stuck
+            .siteHeader
+                &-logo
+                    width: 28px
+                &-companyTitle
+                    font-size: 1.1rem
+                &-companyService
+                    font-size: 0.7rem
+                &-phone
+                    font-size: 1.25rem
+                &-callBack
+                    padding: 11px 25px
     &-logo
+        display: block
         margin-right: 15px
+        transition: width .3s
         @media (max-width: 500px)
             margin-right: 0
             width: 40px
@@ -21,11 +37,14 @@
         font-size: 1.5rem
         font-weight: bold
         text-transform: uppercase
+        transition: font-size .3s
         @media (max-width: 760px)
             display: none
     &-companyService
         color: hsl(0, 0%, 41%)
+        font-size: 1rem
         margin-top: 3px
+        transition: font-size .3s
         @media (max-width: 760px)
             display: none
     &-siteInfo
@@ -36,7 +55,7 @@
         font-weight: bold
         margin-right: 25px
         pointer-events: all
-        transition: color .3s
+        transition: color .3s, font-size .3s
         &:hover
             color: hsl(221, 44%, 31%)
         &::before
@@ -79,7 +98,7 @@
         padding: 15px 32px
         pointer-events: all
         position: relative
-        transition: background .3s, color .3s
+        transition: background .3s, color .3s, padding .3s
         &:focus
             color: white
         &:visited
@@ -89,9 +108,9 @@
             color: hsl(37, 100%, 65%)
         @media (max-width: 580px)
             display: none
-        @include breakpoint(large up)
+        @include breakpoint(medium up)
             margin-right: 0
-        @include breakpoint(medium down)
+        @include breakpoint(small only)
             &::after
                 background: hsla(210, 2%, 80%, 0.3)
                 content: ''
