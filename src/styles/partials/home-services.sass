@@ -52,7 +52,9 @@
         padding: 18px 27px
         padding-right: 40px
         position: relative
-        transition: background .3s, margin-bottom .3s, border-radius .3s
+        transition: background .3s, margin-bottom .3s, border-radius .3s, box-shadow .3s
+        &:hover
+            box-shadow: 0 0 20px 1px hsla(0, 0%, 0%, 0.1)
         &::before
             background: hsl(215, 58%, 38%)
             content: ''
