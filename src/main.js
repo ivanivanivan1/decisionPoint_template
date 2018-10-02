@@ -168,12 +168,12 @@ function initSlick(where) {
         var currentDot = $('.slider-dots li.slick-active .slider-dotsCircle_animated').get(0)
         var interval = 50
         var offset_increment = 0.2
-        var stroke_dashoffset = 2 * offset_increment
-        currentDot.setAttribute('stroke-dashoffset', offset_increment + 'px')
+        var stroke_dashoffset = 5 * offset_increment
+        currentDot.setAttribute('stroke-dashoffset', stroke_dashoffset - offset_increment + 'px')
         
         window.timerNextSlide = window.setInterval(function() {
             if (!window.isSliderPaused) {
-                if (stroke_dashoffset > 57) {
+                if (stroke_dashoffset > 60) {
                     // stroke_dashoffset = 0
                     currentDot.setAttribute("stroke-dashoffset", 0 + 'px')
                     window.clearInterval(window.timerNextSlide)
