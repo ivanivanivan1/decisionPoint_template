@@ -27,6 +27,7 @@
             font-size: 2rem
             margin-bottom: 15px
     &-wrapper
+        margin-bottom: 20px
         @media (max-width: 400px)
             width: calc(100% - 1.25rem) !important
     &-wrapper.is-active
@@ -48,11 +49,11 @@
             &:hover
                 box-shadow: 0 0 20px 1px hsla(0, 0%, 0%, 0.1)
     &-block
+        align-items: center
         background: hsl(210, 25%, 98%)
         border: 1px solid hsl(204, 6%, 84%)
         border-radius: 10px
-        display: block
-        margin-bottom: 20px
+        display: flex
         padding: 18px 27px
         padding-right: 40px
         position: relative
@@ -75,6 +76,7 @@
         position: relative
         transition: color .3s
         user-select: none
+        width: 100%
         &::after
             border: 1px solid hsl(220, 1%, 55%)
             border-width: 0 0 2px 2px

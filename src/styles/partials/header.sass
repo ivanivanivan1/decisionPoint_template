@@ -16,7 +16,7 @@
         &.is-stuck
             .siteHeader
                 &-logo
-                    width: 28px
+                    max-width: 28px
                 &-companyTitle
                     font-size: 1.1rem
                 &-companyService
@@ -28,10 +28,10 @@
     &-logo
         display: block
         margin-right: 15px
-        transition: width .3s
+        max-width: 53px
         @media (max-width: 500px)
             margin-right: 0
-            width: 40px
+            max-width: 40px
     &-companyTitle
         color: $primary-color
         font-size: 1.5rem

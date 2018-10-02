@@ -17,21 +17,17 @@ $(document)
 	.ready(() => {
         $(document).foundation()
 		$('html').addClass('jquery-ready')
-		// initSlick(rootEl)
-        // mfpInit(document)
         initYandexMaps(document)
-        initSlick(document)
+        initSlick(rootEl)
         maskInputs(document)
         initHomePageScripts()
         initServicesEqualizer(document)
         initMfp(document)
-        // $(window).resize(function() {
-        //     if (Foundation.MediaQuery.atLeast('medium')) {
-        //         $('#home-slider').css('margin-top', 0)
-        //     } else {
-        //         $('#home-slider').css('margin-top', $('#siteHeader').outerHeight())
-        //     }
-        // }).resize()
+        initAccordionCustomHandler(document)
+
+        $(window).resize(function() {
+            initServicesEqualizer(document)
+        })
 	})
 const foundationMediaQueriesInPixels = createFoundationMediaQueriesInPixels()
 function createFoundationMediaQueriesInPixels() {
@@ -164,11 +160,6 @@ function initSlick(where) {
             })
             .on('beforeChange', function(e, slick, currentSlide) {
                 window.currentSlide = currentSlide
-                // var nextSlide = (currentSlide + 1) % slick.$slides.length
-                // if (nextSlide == currentSlide) {
-                //     e.preventDefault()
-                //     return false
-                // }
             })
             .slick(options)
     })
@@ -230,17 +221,25 @@ function maskInputs(where) {
     })
 }
 function initServicesEqualizer(where) {
-    // $(where).find('[data-services-equalizer]').each((index, element) => {
-    //     element.addEventListener('click', function() {
-    //         var row = element.attr('data-services-equalizer-row')
+    $(where).find('[data-custom-equalizer]').each(function() {
+        var parent = $(this)
+        var types = parent.attr('data-custom-equalizer')
+        var rows = types.split(",")
 
-    //         $('[data-services-equalizer-row=' + row + ']').getHeights(function(heightsArray) {
-    //             elem.applyHeight(heightsArray)
-    //         });
-            
-    //         $('#element').foundation('getHeights', cb);
-    //     })
-    // })
+        $.each(rows, function(index, element) {
+            var H = 0
+            parent.find('[data-custom-equalizer-watch="row-' + element + '"]').each(function() {
+                $(this).removeAttr('style')
+                if (Foundation.MediaQuery.atLeast('medium')) {
+                    var h = $(this).height()
+                    if( h > H ){ H = h }
+                }
+            })
+            if (Foundation.MediaQuery.atLeast('medium')) {
+                $('[data-custom-equalizer-watch="row-' + element + '"]').height(H)
+            }
+        })
+    })
 }
 function initMfp(where) {
     $(where).find('[data-mfp]').magnificPopup({
@@ -251,4 +250,17 @@ function initMfp(where) {
 		callbacks: {
 		}
 	})
+}
+function initAccordionCustomHandler(where) {
+    $(where).find('[data-accordion-custom-handler]').on('down.zf.accordion', function(e, tgt) {
+        var item_id = $(tgt).get(0).id
+        $(where).find('[data-accordion-custom-handler-wrapper]').find('[data-accordion]').each((index, element) => {
+            var parent = element
+            $(parent).find('[data-tab-content]:visible').each((index, element) => {
+                if (item_id != element.id) {
+                    $(parent).foundation('up', $(element))
+                }
+            })
+        })
+    })
 }
