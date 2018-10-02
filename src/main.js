@@ -3,6 +3,7 @@ import Foundation from './scripts/vendor-foundation'
 import 'leaflet/dist/leaflet'
 import 'slick-carousel'
 import Inputmask from "inputmask/dist/inputmask/inputmask.numeric.extensions";
+import 'magnific-popup'
 const $ = window.$ = jQuery
 const env = '__ENV'
 const rootEl = document.querySelector('html')
@@ -22,6 +23,8 @@ $(document)
         initSlick(document)
         maskInputs(document)
         initHomePageScripts()
+        initServicesEqualizer(document)
+        initMfp(document)
         $(window).resize(function() {
             if (Foundation.MediaQuery.atLeast('large')) {
                 $('#home-slider').css('margin-top', 0)
@@ -225,5 +228,14 @@ function maskInputs(where) {
                 'clearmaskonlostfocus': false,
             }).mask(element);
     })
-	// $(where).find('[data-masked-input-phone]').mask('+7(999) 999-99-99')
+}
+function initMfp(where) {
+    $(where).find('[data-mfp]').magnificPopup({
+        type: 'inline',
+        mainClass: 'mfp-fade',
+        removalDelay: 500,
+        closeOnBgClick: true,
+		callbacks: {
+		}
+	})
 }

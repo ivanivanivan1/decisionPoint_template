@@ -20,7 +20,7 @@
                         <div class="cell small-shrink auto">
                             <div class="grid-x">
                                 <div class="cell shrink">
-                                    <img src="assets/img/logo.png" alt="" class="siteHeader-logo">
+                                    <a href="" class="siteHeader-logo"><img src="assets/img/logo.png" alt=""></a>
                                 </div>
                                 <div class="cell shrink align-self-middle siteHeader-siteInfo">
                                     <div class="grid-y">
@@ -37,8 +37,8 @@
                         <div class="cell shrink">
                             <a href="tel:+78129208872" class="siteHeader-phone">+7 (812) 920-88-72</a>
                         </div>
-                        <div class="cell shrink" data-smooth-scroll data-animation-duration="350" data-animation-easing="swing" data-offset="100">
-                            <a href="#consultation" class="siteHeader-callBack">Заказать звонок</a>
+                        <div class="cell shrink">
+                            <a href="#consultation" class="siteHeader-callBack" data-mfp>Заказать звонок</a>
                         </div>
                         <button class="menuToggler" data-toggle="menuToggler" id="menuTogglerHamburger">
                             <span class="bar-top"></span>
@@ -116,7 +116,7 @@
                 <div class="grid-container">
                     <div class="grid-x align-middle">
                         <div class="cell large-8 medium-7 small-9">
-                            <h1 class="slider-slideTitle">Тут какой-либо заголовк</h1>
+                            <h1 class="slider-slideTitle">Тут какой-либо заголовок</h1>
                             <h3 class="slider-slideDesc">с какой-либо подписью</h3>
                         </div>
                         <div class="cell large-4 medium-5 self-align-right contactForm">
@@ -191,7 +191,7 @@
                     <div class="grid-y grid-margin-x" data-accordion data-allow-all-closed="true" data-multi-expand="false">
                         <div class="services-wrapper cell medium-4 small-12" data-accordion-item>
                             <a class="services-block">
-                                <div class="services-blockTitle">Защитафы дольщиков и пальщиков</div>
+                                <div class="services-blockTitle">Защитафы дольщиков и пальщиков и пальщиков и пальщиков и пальщиков</div>
                             </a>
                             <ul class="services-content" data-tab-content style="display: none">
                                 <li><a href=""><span>Споры с банками</span></a></li>
@@ -540,5 +540,32 @@
             </div>
         </div>
     </footer>
+    <div class="mfp-hide modalCallback" id="consultation">
+        <div class="contactForm">
+            <div class="contactForm-main">
+                <div class="grid-y">
+                    <div class="cell">
+                        <div class="contactForm-icon">
+                            <img src="assets/img/chat.svg" alt="" width="23px" height="21px">
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <h2 class="contactForm-label">Получите бесплатную консультацию</h2>
+                    </div>
+                    <div class="cell">
+                        <form action="">
+                            <input type="tel" name="" id="" placeholder="Введите ваш телефон" class="buttonPhone" data-masked-input-phone>
+                            <div class="buttonSubmit">
+                                <input type="submit" value="Получить консультацию" class="buttonSubmit-btn">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm-substrate"></div>
+            <div class="contactForm-substrate contactForm-substrate_bottom"></div>
+            <button title="Закрыть" type="button" class="mfp-close">×</button>
+        </div>
+    </div>
 </body>
 </html>
