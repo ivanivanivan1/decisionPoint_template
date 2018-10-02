@@ -252,9 +252,9 @@ function initMfp(where) {
 	})
 }
 function initAccordionCustomHandler(where) {
-    $(where).find('[data-accordion-custom-handler]').on('down.zf.accordion', function(e, tgt) {
-        var item_id = $(tgt).get(0).id
-        $(where).find('[data-accordion-custom-handler-wrapper]').find('[data-accordion]').each((index, element) => {
+    $(where).find('[ data-accordion-custom-handler]').on('mouseup', function(e) {
+        var item_id = $(this).siblings('[data-tab-content]').get(0).id
+        $(where).find('[data-accordion]').each((index, element) => {
             var parent = element
             $(parent).find('[data-tab-content]:visible').each((index, element) => {
                 if (item_id != element.id) {
