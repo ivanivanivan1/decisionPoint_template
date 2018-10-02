@@ -3,22 +3,40 @@
     overflow: hidden
     padding-bottom: 20px
     @include breakpoint(small only)
-        padding-bottom: 38px
+        padding-bottom: 15px
+    a
+        border-bottom: 1px solid transparent
+        color: white
+        transition: border-bottom .3s, color .3s
+        &:hover
+            border-bottom: 1px solid hsl(37, 100%, 65%)
+            color: hsl(37, 100%, 65%)
+    &-blockWrapper
+        max-width: 150px
+        @include breakpoint(small only)
+            max-width: none
     &-links
+        ul
+            list-style: none
+            margin: 0
+            padding: 0
         @include breakpoint(small only)
             line-height: 2.2
-    &-about
+    &-addressWrapper
+        max-width: 400px
         @include breakpoint(small only)
-            margin-top: 35px
-    &-policyBlock
-        @include breakpoint(small only)
-            margin-top: 22px
+            max-width: none
     &-addressBlock
         @include breakpoint(small only)
             margin-top: 28px
     &-timeWorkingBlock
-        @include breakpoint(small only)
-            display: none
+        &_mediumUp
+            @include breakpoint(small only)
+                display: none
+        &_smallOnly
+            margin-top: 8px
+            @include breakpoint(medium up)
+                display: none
     &-blockTitle
         color: hsla(0, 0%, 100%, 0.5)
         font-size: 0.875rem
@@ -29,42 +47,13 @@
     &-blockText
         color: white
         font-size: 1rem
-        a
-            border-bottom: 1px solid transparent
-            color: white
-            transition: border-bottom .3s, color .3s
-            &:hover
-                border-bottom: 1px solid hsl(37, 100%, 65%)
-                color: hsl(37, 100%, 65%)
     &-policy
         a
             border-bottom: 1px solid white
-    &-top
-        padding: 70px 0 100px
+    &-wrapper
+        padding: 70px 0
         @include breakpoint(small only)
-            margin-bottom: 38px
-            padding: 38px 0
-    &-bottom
-        // margin-top: 40px
-        padding-bottom: 65px
-        position: relative
-        @include breakpoint(small only)
-            padding-bottom: 30px
-        &::before
-            background: hsl(219, 7%, 37%)
-            content: ''
-            display: block
-            height: 1px
-            left: -100%
-            margin-top: -40px
-            position: absolute
-            top: 0
-            width: 300%
-            @include breakpoint(small only)
-                margin-top: -38px
-    &-bottomContent
-        @include breakpoint(small only)
-            justify-content: left
+            padding: 25px 0
     &-copyright
         color: hsla(0, 0%, 100%, 0.5)
         font-size: 0.75rem
