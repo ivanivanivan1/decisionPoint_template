@@ -2,6 +2,14 @@
     padding: 
     @media (max-width: 750px)
         display: none
+    &_mediumDown
+        display: none
+        @include breakpoint(medium down)
+            display: block
+    &_largeUp
+        display: none
+        @include breakpoint(large up)
+            display: block
     &-main
         background: white
         border-radius: 10px

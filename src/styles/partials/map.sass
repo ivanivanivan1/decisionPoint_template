@@ -2,13 +2,14 @@
     background: hsl(0, 0%, 90%)
     &-container
         height: 640px
+        max-height: auto
         @include breakpoint(medium down)
             height: 320px
     &-info
         line-height: 1
-        padding: 40px 50px
+        padding: 40px 50px 0
         @media (max-width: 750px)
-            padding: 25px 20px
+            padding: 25px 20px 0
         @include breakpoint(small only)
             padding: 15px 10px
             text-align: center
@@ -40,6 +41,7 @@
         @include breakpoint(medium down)
             font-size: 1.875rem
             margin-bottom: 20px
+            text-decoration: underline
         @include breakpoint(small only)
             margin-bottom: 15px
             margin-top: 0
@@ -55,3 +57,42 @@
             font-size: 1.1rem
         @include breakpoint(small only)
             margin: 0
+    &-contactForm
+        margin-top: 40px
+        max-width: 380px
+        @include breakpoint(medium down)
+            display: none
+        .contactForm-main
+            padding-bottom: 20px
+    &-contactFormMobile
+        .contactForm
+            background: white
+            &-main
+                margin-left: auto
+                margin-right: auto
+                // max-width: 33%
+                padding: 20px 0
+            &-label
+                margin: 0 auto 20px
+                max-width: 510px
+            .buttonPhone,
+            .buttonSubmit
+                display: inline-block
+                max-width: 250px
+                width: 50%
+            .buttonSubmit
+                margin-left: 10px
+            @media (max-width: 610px)
+                &-main
+                    margin: 0 auto
+                    max-width: 300px
+                    text-align: center
+                .buttonPhone,
+                .buttonSubmit
+                    display: block
+                    margin: 0 auto
+                    width: 100%
+                .buttonSubmit
+                    margin-top: 10px
+                &-label
+                    max-width: none

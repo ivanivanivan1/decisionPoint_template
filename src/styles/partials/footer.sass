@@ -47,6 +47,13 @@
     &-blockText
         color: white
         font-size: 1rem
+    &-link
+        @include breakpoint(medium down)
+            a
+                border-bottom: none
+                text-decoration: underline
+                &:hover
+                    border-bottom: none
     &-policy
         a
             border-bottom: 1px solid white
