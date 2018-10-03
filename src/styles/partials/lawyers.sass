@@ -1,0 +1,56 @@
+.lawyers
+	&-content
+		margin-bottom: 30px
+	&-title
+		color: black
+		font-size: 3.375rem
+		padding: 20px 0 30px
+		@include breakpoint(medium down)
+			padding: 10px 0 15px
+	&-breadcrumbs
+		margin-top: 45px
+		@include breakpoint(medium down)
+			margin-top: 20px
+	&-footerBar
+		margin-bottom: 67px
+		@include breakpoint(small only)
+			margin-bottom: 20px
+	&-contactLawyer
+		height: 100%
+		.contactLawyer-main
+			height: 100%
+			@media (max-width: 940px)
+				padding: 20px
+				.buttonPhone,
+				.buttonSubmit
+					display: block
+					width: calc(65%)
+				.buttonSubmit
+					margin-left: 0
+					margin-top: 0.5rem
+			@media (max-width: 875px)
+				.buttonPhone,
+				.buttonSubmit
+					display: block
+					width: calc(100%)
+			@include breakpoint(small only)
+				padding-bottom: 0
+				.buttonPhone,
+				.buttonSubmit
+					display: block
+					margin: 0 auto
+					text-align: center
+					width: calc(60%)
+				.buttonSubmit
+					margin-top: 0.5rem
+				.contactLawyer-label
+					line-height: 2.2rem
+			@media (max-width: 450px)
+				.buttonPhone,
+				.buttonSubmit
+					display: block
+					width: 100%
+	&-wrapper
+		@media (max-width: 420px)
+			&>.cell
+				width: calc(100% - 1.25rem) !important //sass-lint: disable-line override foundation grid

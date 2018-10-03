@@ -5,6 +5,7 @@
 @import '~slick-carousel/slick/slick-theme.scss'; // sass-lint:disable-line not obvious using
 @import '~magnific-popup/src/css/main';
 // @import 'styles/includes/leaflet';
+@import 'styles/includes/icons';
 @import 'styles/modules/vendor-foundation';
 @import 'styles/modules/vendor-slick';
 @import 'styles/modules/vendor-magnific-popup';
@@ -22,4 +23,9 @@
 @import 'styles/partials/slider';
 @import 'styles/partials/contactForm';
 @import 'styles/partials/contactLawyer';
+@import 'styles/partials/lawyers';
+@import 'styles/partials/lawyer';
+@import 'styles/partials/breadcrumbs';
+@import 'styles/partials/socialLinks';
+@import 'styles/partials/footerBar';
 @import 'styles/templates/home';

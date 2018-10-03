@@ -1,0 +1,37 @@
+.breadcrumbs
+	list-style: none
+	margin: 0
+	padding: 0
+	li
+		display: inline-block
+		font-size: 0.875rem
+		position: relative
+		a
+			color: hsl(221, 44%, 41%)
+			text-decoration: underline
+			transition: color .3s
+		&:first-child
+			&::before
+				background: url('../img/home.svg')
+				background-size: contain
+				content: ''
+				display: inline-block
+				height: 15px
+				margin-right: 6px
+				vertical-align: middle
+				width: 15px
+		&:not(.active)
+			a
+				&:hover
+					color: hsl(221, 75%, 15%)
+		&.active
+			a
+				color: black
+				cursor: default
+				text-decoration: none
+	li + li
+		&::before
+			color: hsl(221, 44%, 41%)
+			content: '>'
+			margin: 0 4px
+			position: relative
