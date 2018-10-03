@@ -7,13 +7,17 @@ $img-height: 120px
 	border-radius: 20px
 	display: block
 	height: 100%
+	position: relative
 	transition: box-shadow .3s, border .3s
+	z-index: 1
 	&-img
 		background-color: hsl(0, 0%, 92%)
 		background-position: center
 		background-size: cover
 		border-radius: 20px 20px 0 0
 		height: $img-height
+		position: relative
+		z-index: 2
 	&-title
 		align-items: center
 		color: black
