@@ -1,22 +1,22 @@
 {
-	"extends": "standard",
-	"env": {
-		"browser": true,
-		"node": true,
-		"es6": true
-	},
-	"globals": {
-		"$": true,
-		"jQuery": true,
+    "extends": "standard",
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    "globals": {
+        "$": true,
+        "jQuery": true,
         "Foundation": true
-	},
-	"rules": {
-		"indent": ["error", "tab", {
-			"SwitchCase": 1
-		}],
-		"space-before-function-paren": "off",
-		"semi": ["error", "never"],
-		"no-tabs": "off",
-		"comma-dangle": "off"
-	}
+    },
+    "rules": {
+        "indent": ["error", "tab", {
+            "SwitchCase": 1
+        }],
+        "space-before-function-paren": "off",
+        "semi": ["error", "never"],
+         "no-tabs": "off",
+        "comma-dangle": "off"
+    }
 }
