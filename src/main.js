@@ -79,7 +79,7 @@ function initYandexMaps(where) {
             // Необходимо указать данный тип макета.
             iconLayout: 'default#image',
             // Своё изображение иконки метки.
-            iconImageHref: 'assets/img/logo.png',
+            iconImageHref: '../assets/img/logo.png',
             // Размеры метки.
             iconImageSize: [40, 50],
             // Смещение левого верхнего угла иконки относительно
