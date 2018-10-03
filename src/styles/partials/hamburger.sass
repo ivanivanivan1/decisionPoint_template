@@ -1,35 +1,35 @@
 .menuToggler
-    pointer-events: all
-    background: transparent
-    border: 1px solid transparent
-    cursor: pointer
-    height: 18px
-    position: relative
-    width: 23px
-    @include breakpoint(medium up)
-        display: none
-    @media (max-width: 580px)
-        margin-right: 10px
-    @media (max-width: 310px)
-        margin-right: 0
-    &:focus
-        outline-width: 0
-    & [class*='bar-']
-        background: hsl(0, 0%, 53%)
-        display: block
-        height: 2px
-        margin-bottom: 4px
-        transform: rotate(0deg)
-        transition: .2s ease all
-        width: 100%
-    .bar-bot
-        margin-bottom: 0
-    &_open
-        .bar-bot
-            transform: rotate(-45deg)
-            transform-origin: 10% 95%
-        .bar-mid
-            opacity: 0
-        .bar-top
-            transform: rotate(45deg)
-            transform-origin: 10% 15%
+	pointer-events: all
+	background: transparent
+	border: 1px solid transparent
+	cursor: pointer
+	height: 18px
+	position: relative
+	width: 23px
+	@include breakpoint(medium up)
+		display: none
+	@media (max-width: 580px)
+		margin-right: 10px
+	@media (max-width: 310px)
+		margin-right: 0
+	&:focus
+		outline-width: 0
+	& [class*='bar-']
+		background: hsl(0, 0%, 53%)
+		display: block
+		height: 2px
+		margin-bottom: 4px
+		transform: rotate(0deg)
+		transition: transform .2s ease
+		width: 100%
+	.bar-bot
+		margin-bottom: 0
+	&_open
+		.bar-bot
+			transform: rotate(-45deg)
+			transform-origin: 10% 95%
+		.bar-mid
+			opacity: 0
+		.bar-top
+			transform: rotate(45deg)
+			transform-origin: 10% 15%

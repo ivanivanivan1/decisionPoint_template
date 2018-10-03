@@ -1,81 +1,82 @@
 .slider
-    overflow: hidden
-    &-slide
-        background-position: center
-        background-repeat: no-repeat
-        background-size: cover
-        min-height: 450px
-        padding: 50px 0 35px
-        @include breakpoint(medium down)
-            padding-bottom: 40px
-            padding-top: 50px
-        @media (max-width: 750px)
-            padding-bottom: 180px
-    &-slideTitle
-        color: white
-        font-size: 3.5rem
-        font-weight: bold
-        line-height: 4.25rem
-        padding-right: 4.5rem
-        @include breakpoint(medium down)
-            font-size: 2.5rem
-            line-height: 2.875rem
-            margin-right: 50px
-            padding-right: 0
-        @media (max-width: 400px)
-            font-size: 2.125rem
-        @media (max-width: 750px)
-            margin-right: 0
-    &-slideDesc
-        color: hsla(0, 0%, 100%, 0.7)
-        font-size: 1.5rem
-        @include breakpoint(medium down)
-            font-size: 1.25rem
-            margin-right: 10px
-        @media (max-width: 400px)
-            font-size: 1.25rem
-    &-dots
-        line-height: 1
-        list-style: none
-        margin: 0
-        margin-top: -60px
-        position: relative
-        z-index: 3
-        @media (max-width: 750px)
-            margin-top: -170px
-        &>li
-            cursor: pointer
-            display: inline-block
-            height: 20px
-            text-align: center
-            width: 20px
-            button
-                cursor: pointer
-                overflow: hidden
-                text-indent: -9999px
-        li:not(.slick-active)
-            .slider-dotsWrapper
-                display: none
-            button
-                background: hsl(216, 3%, 64%)
-                border-radius: 50%
-                height: 5px
-                vertical-align: middle
-                width: 5px
-        li + li
-            margin-left: 15px
-        li.slick-active
-            cursor: default
-            pointer-events: none
-            vertical-align: middle
-            button
-                display: none
-            .slider-dotsWrapper
-                transform: rotateZ(-90deg) rotateX(180deg)
-            .slider-dotsCircle
-                fill: transparent
-                &_animated
-                    // stroke-dashoffset: 0
-                    fill: transparent
-                    stroke: hsl(45, 100%, 50%)
-                    stroke-dasharray: 60px
+	overflow: hidden
+	&-slide
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		min-height: 450px
+		padding: 50px 0 35px
+		@include breakpoint(medium down)
+			padding-bottom: 40px
+			padding-top: 50px
+		@media (max-width: 750px)
+			padding-bottom: 180px
+	&-slideTitle
+		color: white
+		font-size: 3.5rem
+		font-weight: bold
+		line-height: 4.25rem
+		padding-right: 4.5rem
+		@include breakpoint(medium down)
+			font-size: 2.5rem
+			line-height: 2.875rem
+			margin-right: 50px
+			padding-right: 0
+		@media (max-width: 400px)
+			font-size: 2.125rem
+		@media (max-width: 750px)
+			margin-right: 0
+	&-slideDesc
+		color: hsla(0, 0%, 100%, 0.7)
+		font-size: 1.5rem
+		@include breakpoint(medium down)
+			font-size: 1.25rem
+			margin-right: 10px
+		@media (max-width: 400px)
+			font-size: 1.25rem
+	&-dots
+		line-height: 1
+		list-style: none
+		margin: 0
+		margin-top: -60px
+		position: relative
+		z-index: 3
+		@media (max-width: 750px)
+			margin-top: -170px
+		&>li
+			cursor: pointer
+			display: inline-block
+			height: 20px
+			text-align: center
+			width: 20px
+			button
+				cursor: pointer
+				overflow: hidden
+				text-indent: -9999px
+		li:not(.slick-active)
+			.slider-dotsWrapper
+				display: none
+			button
+				background: hsl(216, 3%, 64%)
+				border-radius: 50%
+				height: 5px
+				vertical-align: middle
+				width: 5px
+		li + li
+			margin-left: 15px
+		li
+			&.slick-active
+				cursor: default
+				pointer-events: none
+				vertical-align: middle
+				button
+					display: none
+				.slider-dotsWrapper
+					transform: rotateZ(-90deg) rotateX(180deg)
+				.slider-dotsCircle
+					fill: transparent
+					&_animated
+						// stroke-dashoffset: 0
+						fill: transparent
+						stroke: hsl(45, 100%, 50%)
+						stroke-dasharray: 60px

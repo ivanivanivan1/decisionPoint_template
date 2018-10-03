@@ -1,10 +1,10 @@
 @import 'styles/settings';
 @import 'styles/vendor-settings';
 @import '~foundation-sites/scss/foundation';
-@import '~slick-carousel/slick/slick.scss';
-@import '~slick-carousel/slick/slick-theme.scss';
+@import '~slick-carousel/slick/slick.scss'; // sass-lint:disable-line not obvious using
+@import '~slick-carousel/slick/slick-theme.scss'; // sass-lint:disable-line not obvious using
 @import '~magnific-popup/src/css/main';
-@import 'styles/modules/leaflet';
+// @import 'styles/includes/leaflet';
 @import 'styles/modules/vendor-foundation';
 @import 'styles/modules/vendor-slick';
 @import 'styles/modules/vendor-magnific-popup';

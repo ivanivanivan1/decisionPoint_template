@@ -91,7 +91,7 @@ function initYandexMaps(where) {
             iconContentLayout: MyIconContentLayout,
             hideIconOnBalloonOpen: false,
         });
-        
+
         // После того как метка была создана, ее
         // можно добавить на карту.
         myMap.geoObjects.add(myPlacemark)
@@ -112,14 +112,6 @@ function initSlick(where) {
 		let options = {
             // autoplay: true,
             appendDots: $('#sliderDots'),
-            // customPaging: function(slider, i) {
-            //     return '<div class="slider-dotsWrapper" data-anim="base wrapper"> \
-            //                 <button type="button" tabindex="' + i + '" role="tab" id="slick-slide-control' + i + '" aria-controls="slick-slide' + i + '" aria-label="' + i + ' of ' + slider.sliderCount + '">' + (i + 1) + '</button> \
-            //                 <div class="slider-dotsCircle" data-anim="base under"></div> \
-            //                 <div class="slider-dotsCircle" data-anim="base right"></div> \
-            //                 <div class="slider-dotsCircle" data-anim="base left"></div> \
-            //             </div>';
-            // },
             customPaging: function(slider, i) {
                 return '<button type="button" tabindex="' + i + '" role="tab" id="slick-slide-control' + i + '" aria-controls="slick-slide' + i + '" aria-label="' + i + ' of ' + slider.sliderCount + '">' + (i + 1) + '</button>\
                         <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" class="slider-dotsWrapper">\
@@ -170,7 +162,7 @@ function initSlick(where) {
         var offset_increment = 0.2
         var stroke_dashoffset = 5 * offset_increment
         currentDot.setAttribute('stroke-dashoffset', stroke_dashoffset - offset_increment + 'px')
-        
+
         window.timerNextSlide = window.setInterval(function() {
             if (!window.isSliderPaused) {
                 if (stroke_dashoffset > 60) {
@@ -193,7 +185,7 @@ function initHomePageScripts() {
         $('#search-button-wrapper').fadeOut(100)
         $('#search').focus()
     })
-    
+
     $('#menuTogglerHamburger').on('click', function() {
         $(this).toggleClass('menuToggler_open')
     })

@@ -17,13 +17,13 @@ var gulp = require('gulp'),
     connect = require('gulp-connect-php'),
     // gutil = require('gulp-util'),
     tildeImporter = require('node-sass-tilde-importer'),
-    babel = require('gulp-babel'),
-    
+    // babel = require('gulp-babel'),
+
     browserify = require('browserify'),
     babelify = require('babelify'),
     source = require('vinyl-source-stream');
 
-    const fullpath = require('path');
+    // const fullpath = require('path');
 
 var path = {
     build: { //Тут мы укажем куда складывать готовые после сборки файлы
@@ -126,7 +126,7 @@ gulp.task('watch-task', function(){
         gulp.start('html:build');
     });
     watch([path.watch.php]).on('change', reload);
-    
+
     watch([path.watch.style], function(event, cb) {
         gulp.start('style:build');
     });

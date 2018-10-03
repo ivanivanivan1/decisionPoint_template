@@ -1,122 +1,122 @@
 .siteHeader
-    background: #fff
-    border-bottom: 1px solid hsl(210, 2%, 80%)
-    overflow: hidden
-    padding: 7px 0 9px
-    pointer-events: all
-    &-wrapper
-        @include breakpoint(medium down)
-            pointer-events: none
-            position: fixed
-            top: 0
-            width: 100%
-            z-index: 100
-        @include breakpoint(small down)
-            position: relative
-        &.is-stuck
-            .siteHeader
-                &-logo
-                    max-width: 28px
-                &-companyTitle
-                    font-size: 1.1rem
-                &-companyService
-                    font-size: 0.7rem
-                &-phone
-                    font-size: 1.25rem
-                &-callBack
-                    padding: 11px 25px
-    &-logo
-        display: block
-        margin-right: 15px
-        max-width: 53px
-        @media (max-width: 500px)
-            margin-right: 0
-            max-width: 40px
-    &-companyTitle
-        color: $primary-color
-        font-size: 1.5rem
-        font-weight: bold
-        text-transform: uppercase
-        transition: font-size .3s
-        @media (max-width: 760px)
-            display: none
-    &-companyService
-        color: hsl(0, 0%, 41%)
-        font-size: 1rem
-        margin-top: 3px
-        transition: font-size .3s
-        @media (max-width: 760px)
-            display: none
-    &-siteInfo
-        line-height: 1
-    &-phone
-        color: hsl(221, 44%, 41%)
-        font-size: 1.5rem
-        font-weight: bold
-        margin-right: 25px
-        pointer-events: all
-        transition: color .3s, font-size .3s
-        &:hover
-            color: hsl(221, 44%, 31%)
-        &::before
-            content: url(../img/phone.png)
-            height: 14px
-            margin-right: 7px
-            width: 14px
-            @media (max-width: 580px)
-                content: ''
-                height: 0
-                width: 0
-        @media (max-width: 500px)
-            font-size: 1.25rem
-            margin-right: 0
-        @media (max-width: 580px)
-            margin-right: 37px
-            position: relative
-            &::after
-                background: hsla(210, 2%, 80%, 0.3)
-                content: ''
-                display: block
-                height: 500%
-                right: -15px
-                position: absolute
-                top: -150%
-                width: 1px
-        @media (max-width: 310px)
-            font-size: 1.15rem
-            margin-right: 27px
-        @include breakpoint(medium down)
-            text-decoration: underline        
-    &-callBack
-        background: hsl(37, 100%, 65%)
-        border: 1px solid hsl(37, 100%, 65%)
-        border-radius: 10px
-        color: white
-        font-size: 0.9375rem
-        font-weight: bold
-        margin-right: 33px
-        padding: 15px 32px
-        pointer-events: all
-        position: relative
-        transition: background .3s, color .3s, padding .3s
-        &:focus
-            color: white
-        &:visited
-            color: white
-        &:hover, &:active
-            background: transparent
-            color: hsl(37, 100%, 65%)
-        @media (max-width: 580px)
-            display: none
-        @include breakpoint(medium up)
-            margin-right: 0
-        @include breakpoint(small only)
-            &::after
-                background: hsla(210, 2%, 80%, 0.3)
-                content: ''
-                display: block
-                height: 200%
-                right: -15px
-                position: absolute
-                top: -50%
-                width: 1px
+	background: hsl(0, 0%, 100%)
+	border-bottom: 1px solid hsl(210, 2%, 80%)
+	overflow: hidden
+	padding: 7px 0 9px
+	pointer-events: all
+	&-wrapper
+		@include breakpoint(medium down)
+			pointer-events: none
+			position: fixed
+			top: 0
+			width: 100%
+			z-index: 100
+		@include breakpoint(small down)
+			position: relative
+		&.is-stuck
+			.siteHeader
+				&-logo
+					max-width: 28px
+				&-companyTitle
+					font-size: 1.1rem
+				&-companyService
+					font-size: 0.7rem
+				&-phone
+					font-size: 1.25rem
+				&-callBack
+					padding: 11px 25px
+	&-logo
+		display: block
+		margin-right: 15px
+		max-width: 53px
+		@media (max-width: 500px)
+			margin-right: 0
+			max-width: 40px
+	&-companyTitle
+		color: $primary-color
+		font-size: 1.5rem
+		font-weight: bold
+		text-transform: uppercase
+		transition: font-size .3s
+		@media (max-width: 760px)
+			display: none
+	&-companyService
+		color: hsl(0, 0%, 41%)
+		font-size: 1rem
+		margin-top: 3px
+		transition: font-size .3s
+		@media (max-width: 760px)
+			display: none
+	&-siteInfo
+		line-height: 1
+	&-phone
+		color: hsl(221, 44%, 41%)
+		font-size: 1.5rem
+		font-weight: bold
+		margin-right: 25px
+		pointer-events: all
+		transition: color .3s, font-size .3s
+		&:hover
+			color: hsl(221, 44%, 31%)
+		&::before
+			content: url('../img/phone.png')
+			height: 14px
+			margin-right: 7px
+			width: 14px
+			@media (max-width: 580px)
+				content: ''
+				height: 0
+				width: 0
+		@media (max-width: 500px)
+			font-size: 1.25rem
+			margin-right: 0
+		@media (max-width: 580px)
+			margin-right: 37px
+			position: relative
+			&::after
+				background: hsla(210, 2%, 80%, 0.3)
+				content: ''
+				display: block
+				height: 500%
+				right: -15px
+				position: absolute
+				top: -150%
+				width: 1px
+		@media (max-width: 310px)
+			font-size: 1.15rem
+			margin-right: 27px
+		@include breakpoint(medium down)
+			text-decoration: underline
+	&-callBack
+		background: hsl(37, 100%, 65%)
+		border: 1px solid hsl(37, 100%, 65%)
+		border-radius: 10px
+		color: white
+		font-size: 0.9375rem
+		font-weight: bold
+		margin-right: 33px
+		padding: 15px 32px
+		pointer-events: all
+		position: relative
+		transition: background .3s, color .3s, padding .3s
+		&:focus,
+		&:visited
+			color: white
+		&:hover,
+		&:active
+			background: transparent
+			color: hsl(37, 100%, 65%)
+		@media (max-width: 580px)
+			display: none
+		@include breakpoint(medium up)
+			margin-right: 0
+		@include breakpoint(small only)
+			&::after
+				background: hsla(210, 2%, 80%, 0.3)
+				content: ''
+				display: block
+				height: 200%
+				right: -15px
+				position: absolute
+				top: -50%
+				width: 1px

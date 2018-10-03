@@ -1,47 +1,48 @@
 .contactLawyer
-    position: relative
-    &::before
-        background: white
-        border: 1px solid hsl(221, 44%, 41%)
-        border-width: 0 0 1px 1px
-        content: ''
-        height: 15px
-        left: -7px
-        position: absolute
-        top: 50px
-        transform: rotate(45deg)
-        width: 15px
-    @media (max-width: 510px)
-        &::before
-            display: none
-    &-main
-        border: 1px solid hsl(221, 44%, 41%)
-        border-radius: 15px
-        padding: 40px 50px 32px
-        @media (max-width: 720px)
-            padding: 20px 20px
-        @media (max-width: 640px)
-            margin-bottom: 20px
-    &-label
-        color: black
-        font-size: 2rem
-        font-weight: bold
-        line-height: 2.625rem
-    .buttonPhone
-        border-color: hsl(221, 31%, 53%)
-        margin-bottom: 0
-        text-align: left
-        @media (max-width: 510px)
-            margin-bottom: 10px
-    .buttonPhone, .buttonSubmit
-        display: inline-block
-        width: calc(50% - 5px)
-        @media (max-width: 510px)
-            display: block
-            width: 65%
-        @media (max-width: 380px)
-            width: 100%
-    .buttonSubmit
-        margin-left: 10px
-        @media (max-width: 510px)
-            margin-left: 0
+	position: relative
+	&::before
+		background: white
+		border: 1px solid hsl(221, 44%, 41%)
+		border-width: 0 0 1px 1px
+		content: ''
+		height: 15px
+		left: -7px
+		position: absolute
+		top: 50px
+		transform: rotate(45deg)
+		width: 15px
+	@media (max-width: 510px)
+		&::before
+			display: none
+	&-main
+		border: 1px solid hsl(221, 44%, 41%)
+		border-radius: 15px
+		padding: 40px 50px 32px
+		@media (max-width: 720px)
+			padding: 20px
+		@media (max-width: 640px)
+			margin-bottom: 20px
+	&-label
+		color: black
+		font-size: 2rem
+		font-weight: bold
+		line-height: 2.625rem
+	.buttonPhone
+		border-color: hsl(221, 31%, 53%)
+		margin-bottom: 0
+		text-align: left
+		@media (max-width: 510px)
+			margin-bottom: 10px
+	.buttonPhone,
+	.buttonSubmit
+		display: inline-block
+		width: calc(50% - 5px)
+		@media (max-width: 510px)
+			display: block
+			width: 65%
+		@media (max-width: 380px)
+			width: 100%
+	.buttonSubmit
+		margin-left: 10px
+		@media (max-width: 510px)
+			margin-left: 0

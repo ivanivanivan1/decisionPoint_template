@@ -1,55 +1,55 @@
 .searchContainer
-    .grid-container
-        @include breakpoint(small only)
-            padding: 0 !important
+	.grid-container
+		@include breakpoint(small only)
+			padding: 0 !important // sass-lint:disable-padding border-zero
 .navSearch
-    backface-visibility: hidden
-    overflow: hidden
-    pointer-events: all
-    position: relative
-    transition: width 0.3s
-    &_open
-        .navSearch-input
-            transform: scaleX(1)
-    &-form
-        backface-visibility: hidden
-        transition: width .3s
-        @include breakpoint(small only)
-            height: 100%
-        &_open
-            height: 100%
-            width: 100%
-    &-input
-        appearance: none
-        background: hsl(210, 10%, 96%)
-        border: none
-        border-radius: 0
-        color: black
-        font-size: 1.25rem
-        height: 100%
-        margin: 0
-        outline: none
-        position: absolute
-        right: 0
-        top: 0
-        transform: scaleX(0)
-        transform-origin: right
-        transition: transform .2s
-        width: 100%
-        z-index: 10
-        @include breakpoint(small only)
-            border-bottom: 1px solid hsl(210, 2%, 80%)
-            height: 3rem
-            padding-left: 0.9375rem
-            position: static
-            transform: scaleX(1)
-    &-buttonWrapper
-        @include breakpoint(small only)
-            display: none
-    &-button
-        position: relative
-        right: 0
-        transition: .2s right .1s ease-in-out
-        z-index: 6
-        &_open
-            right: 20px
+	backface-visibility: hidden
+	overflow: hidden
+	pointer-events: all
+	position: relative
+	transition: width 0.3s
+	&_open
+		.navSearch-input
+			transform: scaleX(1)
+	&-form
+		backface-visibility: hidden
+		transition: width .3s
+		@include breakpoint(small only)
+			height: 100%
+		&_open
+			height: 100%
+			width: 100%
+	&-input
+		appearance: none
+		background: hsl(210, 10%, 96%)
+		border: none
+		border-radius: 0
+		color: black
+		font-size: 1.25rem
+		height: 100%
+		margin: 0
+		outline: none
+		position: absolute
+		right: 0
+		top: 0
+		transform: scaleX(0)
+		transform-origin: right
+		transition: transform .2s
+		width: 100%
+		z-index: 10
+		@include breakpoint(small only)
+			border-bottom: 1px solid hsl(210, 2%, 80%)
+			height: 3rem
+			padding-left: 0.9375rem
+			position: static
+			transform: scaleX(1)
+	&-buttonWrapper
+		@include breakpoint(small only)
+			display: none
+	&-button
+		position: relative
+		right: 0
+		transition: .2s right .1s ease-in-out
+		z-index: 6
+		&_open
+			right: 20px
