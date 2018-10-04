@@ -1,31 +1,4 @@
 .services
-	padding: 90px 0
-	position: relative
-	@include breakpoint(medium down)
-		padding-bottom: 20px
-		padding-top: 30px
-	@include breakpoint(small only)
-		// margin-top: 50%
-		padding-bottom: 10px
-		padding-top: 20px
-	&::after
-		background: hsl(0, 0%, 85%)
-		bottom: 0
-		content: ''
-		display: block
-		height: 1px
-		position: absolute
-		width: 100%
-	&-title
-		font-size: 3.375rem
-		font-weight: bold
-		margin-bottom: 35px
-		@include breakpoint(medium down)
-			font-size: 2.5rem
-			margin-bottom: 20px
-		@media (max-width: 530px)
-			font-size: 2rem
-			margin-bottom: 15px
 	&-wrapper
 		margin-bottom: 20px
 		@media (max-width: 400px)
@@ -48,6 +21,16 @@
 		.services-block
 			&:hover
 				box-shadow: 0 0 20px 1px hsla(0, 0%, 0%, 0.1)
+	&-title
+		font-size: 3.375rem
+		font-weight: bold
+		margin-bottom: 35px
+		@include breakpoint(medium down)
+			font-size: 2.5rem
+			margin-bottom: 20px
+		@media (max-width: 530px)
+			font-size: 2rem
+			margin-bottom: 15px
 	&-block
 		align-items: center
 		background: hsl(210, 25%, 98%)

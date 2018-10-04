@@ -9,6 +9,23 @@
 		@include breakpoint(small only)
 			padding-bottom: 10px
 			padding-top: 20px
+	&-services
+		padding: 90px 0
+		position: relative
+		@include breakpoint(medium down)
+			padding-bottom: 20px
+			padding-top: 30px
+		@include breakpoint(small only)
+			padding-bottom: 10px
+			padding-top: 20px
+		&::after
+			background: hsl(0, 0%, 85%)
+			bottom: 0
+			content: ''
+			display: block
+			height: 1px
+			position: absolute
+			width: 100%
 	&-phoneForm
 		display: none
 		@media (max-width: 750px)
