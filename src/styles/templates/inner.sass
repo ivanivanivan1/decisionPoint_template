@@ -1,0 +1,59 @@
+.siteInner
+	figure
+		padding: 35px 0 20px
+	figcaption
+		color: hsla(210, 2%, 16%, 0.5)
+		font-size: 1rem
+		font-style: italic
+		line-height: 1.6875rem
+		padding-top: 7px
+		text-align: center
+	&-grid
+		$grid-margin-gutters: (small: 10px, medium: 10px, large: 10px)
+		@include xy-grid('horizontal')
+		@include xy-grid-layout(4, '.siteInner-cell', true, $grid-margin-gutters, 'margin', ('right', 'left', 'bottom', 'top'))
+		@include xy-gutters(10, 'margin', $negative: true)
+
+		@include breakpoint(medium only)
+			@include xy-grid-layout(3, '.siteInner-cell', true, $grid-margin-gutters, 'margin', ('right', 'left', 'bottom', 'top'))
+		@media (max-width: 900px)
+			@include xy-grid-layout(2, '.siteInner-cell', true, $grid-margin-gutters, 'margin', ('right', 'left', 'bottom', 'top'))
+		@include breakpoint(small only)
+			@include xy-grid-layout(1, '.siteInner-cell')
+	&-content
+		margin-bottom: 30px
+		padding-top: 60px
+		@include breakpoint(medium down)
+			margin-bottom: 20px
+			padding-top: 20px
+	&-title
+		color: black
+		font-size: 3.375rem
+		line-height: 3.875rem
+		padding-bottom: 25px
+		@include breakpoint(medium down)
+			font-size: 2.75rem
+			line-height: 3.275rem
+			padding-bottom: 10px
+		@include breakpoint(small only)
+			text-align: center
+	&-topTitle
+		padding-top: 20px
+	&-text
+		color: hsl(0, 0%, 0%)
+		font-size: 1.125rem
+		line-height: 1.9375rem
+		@include breakpoint(medium down)
+			margin-bottom: 20px
+		@include breakpoint(small only)
+			margin-bottom: 10px
+	&-benefits
+		padding-top: 4.375rem
+	&-breadcrumbs
+		margin-top: 45px
+		@include breakpoint(medium down)
+			margin-top: 20px
+	&-sidebar
+		&-sideBar
+			@include breakpoint(medium down)
+				margin-top: 20px
