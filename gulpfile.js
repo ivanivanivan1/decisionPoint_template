@@ -14,13 +14,14 @@ var sass = require('gulp-sass')
 var rename = require('gulp-rename')
 var browserSync = require('browser-sync').create()
 var reload = browserSync.reload
-var connect = require('gulp-connect-php')
+// var connectPHP = require('gulp-connect-php')
 // var gutil = require('gulp-util')
 var tildeImporter = require('node-sass-tilde-importer')
 // var babel = require('gulp-babel')
 var browserify = require('browserify')
 var babelify = require('babelify')
 var source = require('vinyl-source-stream')
+var connect = require('gulp-connect')
 
 // const fullpath = require('path');
 
@@ -144,9 +145,12 @@ gulp.task('clean', function (cb) {
 })
 
 gulp.task('browser-sync', function () {
-	connect.server({}, function () {
+	connect.server({
+		root: 'app',
+		livereload: true
+	}, function () {
 		browserSync.init({
-			proxy: 'test.loc/build',
+			proxy: 'layer.loc/theme/build',
 			notify: false
 		})
 	})

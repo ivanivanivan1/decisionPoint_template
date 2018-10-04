@@ -25,6 +25,7 @@
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^3.8.0",
     "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.6.1",
     "gulp-connect-php": "^1.0.1",
     "gulp-imagemin": "^3.3.0",
     "gulp-rigger": "^0.5.8",
