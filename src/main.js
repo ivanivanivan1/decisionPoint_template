@@ -47,63 +47,65 @@ function createFoundationMediaQueriesInPixels() {
 function getFoundationBreakpointInPixels(name) {
 	return foundationMediaQueriesInPixels.find(value => value.name === name).value
 }
-
 function initYandexMaps(where) {
-	var zoom = 17
-	var coords = [59.985485, 30.307600]
-	// Функция ymaps.ready() будет вызвана, когда
-	// загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-	ymaps.ready(init)
-	function init() {
-		// Создание карты.
-		var myMap = new ymaps.Map('yandex-map', {
-			center: coords,
-			// Уровень масштабирования. Допустимые значения:
-			// от 0 (весь мир) до 19.
-			zoom: zoom,
-			controls: ['fullscreenControl'],
-		})
+	$(where).find('[data-yandex-map]').each(function(index, element) {
+		var mapId = element.id
+		var zoom = 17
+		var coords = [59.985485, 30.307600]
+		// Функция ymaps.ready() будет вызвана, когда
+		// загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+		ymaps.ready(init)
+		function init() {
+			// Создание карты.
+			var myMap = new ymaps.Map(mapId, {
+				center: coords,
+				// Уровень масштабирования. Допустимые значения:
+				// от 0 (весь мир) до 19.
+				zoom: zoom,
+				controls: ['fullscreenControl'],
+			})
 
-		var MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-			'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-		)
+			var MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+				'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+			)
 
-		var myPlacemark = new ymaps.Placemark(coords, {
-			// Хинт показывается при наведении мышкой на иконку метки.
-			hintContent: 'Нажмите, чтобы посмотреть контакты',
-			// Балун откроется при клике по метке.
-			balloonContent: '+7 (911) 123-45-67',
-			// iconContent: '12'
-		}, {
-			// Опции.
-			// Необходимо указать данный тип макета.
-			iconLayout: 'default#image',
-			// Своё изображение иконки метки.
-			iconImageHref: 'assets/img/logo.png',
-			// Размеры метки.
-			iconImageSize: [40, 50],
-			// Смещение левого верхнего угла иконки относительно
-			// её "ножки" (точки привязки).
-			// iconImageOffset: [-24, -24],
-			// Смещение слоя с содержимым относительно слоя с картинкой.
-			// iconContentOffset: [15, 15],
-			// Макет содержимого.
-			iconContentLayout: MyIconContentLayout,
-			hideIconOnBalloonOpen: false,
-		})
+			var myPlacemark = new ymaps.Placemark(coords, {
+				// Хинт показывается при наведении мышкой на иконку метки.
+				hintContent: 'Нажмите, чтобы посмотреть контакты',
+				// Балун откроется при клике по метке.
+				balloonContent: '+7 (911) 123-45-67',
+				// iconContent: '12'
+			}, {
+				// Опции.
+				// Необходимо указать данный тип макета.
+				iconLayout: 'default#image',
+				// Своё изображение иконки метки.
+				iconImageHref: 'assets/img/logo.png',
+				// Размеры метки.
+				iconImageSize: [40, 50],
+				// Смещение левого верхнего угла иконки относительно
+				// её "ножки" (точки привязки).
+				// iconImageOffset: [-24, -24],
+				// Смещение слоя с содержимым относительно слоя с картинкой.
+				// iconContentOffset: [15, 15],
+				// Макет содержимого.
+				iconContentLayout: MyIconContentLayout,
+				hideIconOnBalloonOpen: false,
+			})
 
-		// После того как метка была создана, ее
-		// можно добавить на карту.
-		myMap.geoObjects.add(myPlacemark)
+			// После того как метка была создана, ее
+			// можно добавить на карту.
+			myMap.geoObjects.add(myPlacemark)
 
-		$(where).find('[data-get-location-map]').each((index, element) => {
-			element.addEventListener('click', function () {
-				myMap.setCenter(coords, zoom, {
-					duration: 200,
+			$(where).find('[data-get-location-map]').each((index, element) => {
+				element.addEventListener('click', function () {
+					myMap.setCenter(coords, zoom, {
+						duration: 200,
+					})
 				})
 			})
-		})
-	}
+		}
+	})
 }
 
 function initSlick(where) {

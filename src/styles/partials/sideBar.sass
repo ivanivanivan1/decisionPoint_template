@@ -1,0 +1,31 @@
+.sideBar
+	margin: 0
+	.contactLawyer
+		.buttonPhone,
+		.buttonSubmit
+			width: 100%
+		.buttonSubmit
+			margin-left: 0
+			margin-top: 10px
+		&-main
+			@include breakpoint(large up)
+				padding: 30px 35px
+			@include breakpoint(medium down)
+				padding: 20px
+			@include breakpoint(small only)
+				margin-bottom: 0
+		&-label
+			font-size: 1.75rem
+			line-height: 2rem
+		&::before
+			display: none
+	.socialLinks
+		@include breakpoint(large up)
+			margin-top: 20px
+		&-link
+			$height: 42px
+			height: $height
+			line-height: $height
+			width: $height
+		li + li
+			margin-left: 7px

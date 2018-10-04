@@ -1,6 +1,8 @@
 .lawyers
 	&-content
 		margin-bottom: 30px
+		@include breakpoint(medium down)
+			margin-bottom: 20px
 	&-title
 		color: black
 		font-size: 3.375rem
@@ -13,7 +15,7 @@
 			margin-top: 20px
 	&-footerBar
 		margin-bottom: 67px
-		@include breakpoint(small only)
+		@include breakpoint(medium down)
 			margin-bottom: 20px
 	&-wrapper
 		@media (max-width: 420px)

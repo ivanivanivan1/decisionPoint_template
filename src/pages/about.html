@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Site</title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic-ext" rel="stylesheet">
+
+	<link rel="stylesheet" href="assets/css/style.min.css">
+	<script src="assets/js/main.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+
+<body>
+	//= ../partials/header
+	<div class="about">
+		<div class="grid-container">
+			<div class="about-breadcrumbs">
+				//= ../partials/breadcrumbs
+			</div>
+			<div class="about-content">
+				<div class="grid-x grid-margin-x">
+					<div class="cell medium-expand large-8">
+						<main>
+							<h1 class="about-title">Наши контакты</h1>
+							<div class="about-caption">Телефон</div>
+							<div class="about-phone"><a href="tel:+78129208872">+7 (812) 920-88-72</a></div>
+							<div class="about-caption">Адрес офиса</div>
+							<div class="about-address"><span title="Найти местоположение компании на карте" data-get-location-map>Санкт-Петербург, наб. Черной речки, д. 41В, к. 11</span></div>
+							<div class="about-addressDesc" >БЦ «Прогресс Сити», вход с улицы Графова (есть парковка у входа)</div>
+							<div id="yandex-map" class="about-map" data-yandex-map></div>
+						</main>
+					</div>
+					<div class="cell large-4">
+						<div class="grid-x">
+							<aside class="about-sideBar">
+								//= ../partials/side-bar
+							</aside>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	//= ../partials/footer
+	//= ../partials/modal
+</body>
+
+</html>

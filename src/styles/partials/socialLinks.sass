@@ -5,23 +5,36 @@
 	flex-direction: column
 	justify-content: space-between
 	padding: 40px 35px
-	@include breakpoint(small only)
-		margin-top: 1rem
 	@include breakpoint(large up)
 		height: 100%
-	@media (max-width: 940px)
+		padding: 30px 35px
+	@include breakpoint(medium down)
 		padding: 20px
+	@include breakpoint(small only)
+		margin-top: 1rem
 	&-caption
 		color: black
 		font-size: 1.75rem
 		font-weight: bold
-		line-height: 2.625rem
-		@media (max-width: 875px)
-			line-height: 2.2rem
+		line-height: 2rem
+		margin: 0
+		@include breakpoint(medium down)
+			font-size: 1.625rem
+			line-height: 2rem
+		@include breakpoint(small only)
+			font-size: 1.5rem
+			line-height: 1.75rem
 	&-text
 		color: hsl(0, 0%, 41%)
 		font-size: 1.0625rem
 		line-height: 1.5rem
+		margin: 0.5rem 0 1rem
+		@include breakpoint(medium down)
+			font-size: 0.9375rem
+			line-height: 1.3125rem
+		@include breakpoint(small only)
+			font-size: 0.875rem
+			line-height: 1.25rem
 	&-links
 		list-style: none
 		margin: 0

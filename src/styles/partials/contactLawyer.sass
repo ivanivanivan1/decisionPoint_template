@@ -11,27 +11,39 @@
 		top: 50px
 		transform: rotate(45deg)
 		width: 15px
-	@media (max-width: 510px)
+	@include breakpoint(medium down)
 		&::before
 			display: none
 	&-main
 		border: 1px solid hsl(221, 44%, 41%)
 		border-radius: 15px
 		padding: 40px 50px 32px
-		@media (max-width: 720px)
-			padding: 20px
-		@media (max-width: 640px)
+		@include breakpoint(small only)
 			margin-bottom: 20px
+		@include breakpoint(medium down)
+			padding: 20px
 	&-label
 		color: black
 		font-size: 2rem
 		font-weight: bold
 		line-height: 2.625rem
 		margin: 0
+		@include breakpoint(medium down)
+			font-size: 1.625rem
+			line-height: 2rem
+		@include breakpoint(small only)
+			font-size: 1.5rem
+			line-height: 1.75rem
 	&-text
 		color: hsl(0, 0%, 41%)
 		font-size: 1.0625rem
 		line-height: 1.5rem
+		@include breakpoint(medium down)
+			font-size: 0.9375rem
+			line-height: 1.3125rem
+		@include breakpoint(small only)
+			font-size: 0.875rem
+			line-height: 1.25rem
 	&-label + &-text
 		margin: 0.5rem 0 1rem
 	.buttonPhone
@@ -44,12 +56,15 @@
 	.buttonSubmit
 		display: inline-block
 		width: calc(50% - 5px)
-		@media (max-width: 510px)
+		@include breakpoint(medium down)
 			display: block
-			width: 65%
-		@media (max-width: 380px)
 			width: 100%
+		// @media (max-width: 800px)
+		// 	width: 100%
+		// @media (max-width: 380px)
+		// 	width: 100%
 	.buttonSubmit
 		margin-left: 10px
-		@media (max-width: 510px)
+		@include breakpoint(medium down)
 			margin-left: 0
+			margin-top: 10px
