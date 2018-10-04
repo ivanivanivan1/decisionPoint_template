@@ -1,0 +1,77 @@
+.contacts
+	&-content
+		margin-bottom: 30px
+		padding-top: 15px
+		@include breakpoint(medium down)
+			margin-bottom: 20px
+	&-wrapper
+		@include breakpoint(large up)
+			padding-right: 7rem
+	&-title
+		color: black
+		font-size: 3.375rem
+		line-height: 3.875rem
+		margin: 0
+		@include breakpoint(medium down)
+			font-size: 2.75rem
+			padding: 10px 0 0
+	&-breadcrumbs
+		margin-top: 45px
+		@include breakpoint(medium down)
+			margin-top: 20px
+	&-footerBar
+		margin-bottom: 67px
+		@include breakpoint(small only)
+			margin-bottom: 20px
+	&-caption
+		color: hsl(0, 0%, 41%)
+		font-size: 0.875rem
+		font-weight: bold
+		letter-spacing: 0.2rem
+		margin-bottom: 5px
+		margin-top: 30px
+		text-transform: uppercase
+		@include breakpoint(medium down)
+			margin-top: 20px
+	&-phone
+		color: hsl(221, 44%, 41%)
+		font-size: 2.625rem
+		letter-spacing: -0.05rem
+		line-height: 3rem
+		&:hover
+			color: hsl(221, 44%, 31%)
+		@include breakpoint(medium down)
+			font-size: 2rem
+			line-height: 2.375rem
+			text-decoration: underline
+		@include breakpoint(small only)
+			font-size: 1.75rem
+			line-height: 2.125rem
+	&-address
+		color: black
+		font-size: 2.625rem
+		line-height: 3rem
+		span
+			cursor: pointer
+		@include breakpoint(medium down)
+			font-size: 2rem
+			line-height: 2.375rem
+		@include breakpoint(small only)
+			font-size: 1.75rem
+			line-height: 2.125rem
+	&-addressDesc
+		color: hsl(0, 0%, 41%)
+		font-size: 1.25rem
+		margin-top: 15px
+		@include breakpoint(medium down)
+			font-size: 1.1rem
+		@include breakpoint(small only)
+			font-size: 1rem
+	&-map
+		height: 370px
+		margin-top: 50px
+		@include breakpoint(medium down)
+			margin-top: 20px
+	&-sideBar
+		@include breakpoint(medium down)
+			margin-top: 20px
