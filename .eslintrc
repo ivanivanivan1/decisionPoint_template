@@ -8,7 +8,8 @@
     "globals": {
         "$": true,
         "jQuery": true,
-        "Foundation": true
+        "Foundation": true,
+        "ymaps": true
     },
     "rules": {
         "indent": ["error", "tab", {

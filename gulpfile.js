@@ -158,6 +158,6 @@ gulp.task('browser-sync', function () {
 
 gulp.task('default', ['build'])
 
-gulp.task('watch', ['build', /* 'webserver', */ 'watch-task'])
+gulp.task('watch', ['build', 'watch-task'])
 
 gulp.task('sync', ['build', 'browser-sync', 'watch-task'])

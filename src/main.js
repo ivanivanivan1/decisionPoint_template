@@ -143,7 +143,7 @@ function initSlick(where) {
 				animateDots(element)
 			})
 			.on('afterChange', function (e, slick, currentSlide) {
-				if (window.currentSlide != currentSlide) {
+				if (window.currentSlide !== currentSlide) {
 					$('.slider-dots .slider-dotsCircle_animated').each(function (index, element) {
 						element.setAttribute('stroke-dashoffset', 0)
 					})
@@ -250,7 +250,7 @@ function initAccordionCustomHandler(where) {
 		$(where).find('[data-accordion]').each((index, element) => {
 			var parent = element
 			$(parent).find('[data-tab-content]:visible').each((index, element) => {
-				if (itemId != element.id) {
+				if (itemId !== element.id) {
 					$(parent).foundation('up', $(element))
 				}
 			})
