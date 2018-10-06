@@ -51,7 +51,7 @@ function initYandexMaps(where) {
 	$(where).find('[data-yandex-map]').each(function(index, element) {
 		var mapId = element.id
 		var zoom = 17
-		var coords = [59.985485, 30.307600]
+		var coords = [59.98468, 30.31026]
 		// Функция ymaps.ready() будет вызвана, когда
 		// загрузятся все компоненты API, а также когда будет готово DOM-дерево.
 		ymaps.ready(init)

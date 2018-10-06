@@ -9,10 +9,11 @@
 		padding-top: 7px
 		text-align: center
 	&-grid
-		$grid-margin-gutters: (small: 10px, medium: 10px, large: 10px)
+		$gutter-size: 15
+		$grid-margin-gutters: (small: $gutter-size, medium: $gutter-size, large: $gutter-size)
 		@include xy-grid('horizontal')
 		@include xy-grid-layout(4, '.siteInner-cell', true, $grid-margin-gutters, 'margin', ('right', 'left', 'bottom', 'top'))
-		@include xy-gutters(10, 'margin', $negative: true)
+		@include xy-gutters($gutter-size, 'margin', $negative: true)
 
 		@include breakpoint(medium only)
 			@include xy-grid-layout(3, '.siteInner-cell', true, $grid-margin-gutters, 'margin', ('right', 'left', 'bottom', 'top'))
@@ -22,10 +23,10 @@
 			@include xy-grid-layout(1, '.siteInner-cell')
 	&-content
 		margin-bottom: 30px
-		padding-top: 60px
+		padding-top: 20px
 		@include breakpoint(medium down)
 			margin-bottom: 20px
-			padding-top: 20px
+			// padding-top: 20px
 	&-title
 		color: black
 		font-size: 3.375rem

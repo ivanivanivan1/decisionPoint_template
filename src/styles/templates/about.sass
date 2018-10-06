@@ -12,7 +12,7 @@
 		padding: 0 0 25px
 		@include breakpoint(medium down)
 			font-size: 2.75rem
-			padding: 10px 0 0
+			padding: 10px 0
 	&-text
 		color: hsl(0, 0%, 0%)
 		font-size: 1.125rem
@@ -23,6 +23,8 @@
 			margin-bottom: 10px
 	&-benefits
 		padding-top: 4.375rem
+		@include breakpoint(medium down)
+			padding-top: 2rem
 	&-breadcrumbs
 		margin-top: 45px
 		@include breakpoint(medium down)

@@ -20,6 +20,7 @@
 			<nav class="siteInner-breadcrumbs">
 				//= ../partials/breadcrumbs
 			</nav>
+			<!--
 			<h1 class="siteInner-title siteInner-topTitle">Защита заемщиков и вкладчиков</h1>
 			<section class="siteInner-categories">
 				<div class="siteInner-grid">
@@ -100,7 +101,8 @@
 					</div>
 				</div>
 			</section>
-			<div class="siteInner-content">
+			-->
+			<div class="siteInner-content" id="mainContentOnPage">
 				<div class="grid-x grid-margin-x">
 					<div class="cell medium-expand large-8">
 						<main>
@@ -120,8 +122,8 @@
 							</section>
 						</main>
 					</div>
-					<div class="cell large-4">
-						<div class="grid-x">
+					<div class="cell large-4" data-sticky-container>
+						<div class="grid-x sticky" data-sticky data-margin-top="7" data-sticky-on="large" data-anchor="mainContentOnPage">
 							<aside class="siteInner-sideBar">
 								//= ../partials/side-bar
 							</aside>

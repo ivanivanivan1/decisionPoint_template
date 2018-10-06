@@ -1,19 +1,26 @@
 .contactLawyer
+	$p: &
 	position: relative
-	&::before
+	&::after
 		background: white
 		border: 1px solid hsl(221, 44%, 41%)
 		border-width: 0 0 1px 1px
 		content: ''
 		height: 15px
-		left: -7px
 		position: absolute
+		right: -7px
 		top: 50px
-		transform: rotate(45deg)
+		transform: rotate(-135deg)
 		width: 15px
 	@include breakpoint(medium down)
-		&::before
+		&::after
 			display: none
+	@include breakpoint(small only)
+		text-align: center
+		.buttonPhone,
+		.buttonSubmit
+			margin-left: auto
+			margin-right: auto
 	&-main
 		border: 1px solid hsl(221, 44%, 41%)
 		border-radius: 15px
@@ -50,6 +57,8 @@
 		border-color: hsl(221, 31%, 53%)
 		margin-bottom: 0
 		text-align: left
+		@include breakpoint(small only)
+			text-align: center
 		@media (max-width: 510px)
 			margin-bottom: 10px
 	.buttonPhone,
@@ -61,7 +70,9 @@
 			display: block
 			width: 100%
 	.buttonSubmit
-		margin-left: 10px
-		@include breakpoint(medium down)
+		@include breakpoint(medium up)
+			margin-left: 10px
+		@include breakpoint(medium only)
 			margin-left: 0
+		@include breakpoint(medium down)
 			margin-top: 10px

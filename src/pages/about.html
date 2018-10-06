@@ -20,8 +20,8 @@
 			<nav class="about-breadcrumbs">
 				//= ../partials/breadcrumbs
 			</nav>
-			<div class="about-content">
-				<div class="grid-x grid-margin-x">
+			<div class="about-content" id="mainContentOnPage">
+				<div class="grid-x grid-margin-x grid-margin-y">
 					<div class="cell medium-expand large-8">
 						<main>
 							<h1 class="about-title">О компании</h1>
@@ -38,7 +38,7 @@
 								<div class="benefits">
 									<div class="grid-x">
 										<div class="cell">
-											<div class="grid-x grid-margin-y medium-up-3 align-justify">
+											<div class="grid-x grid-margin-y medium-up-3">
 												<div class="cell">
 													<div class="benefits-block">
 														<div class="grid-x">
@@ -46,7 +46,7 @@
 																<img src="assets/img/benefit.png" alt="">
 															</div>
 															<div class="cell">
-																<h2 class="benefits-blockTitle">Доступные цены</h2>
+																<div class="benefits-blockTitle">Доступные цены</div>
 															</div>
 														</div>
 													</div>
@@ -58,7 +58,7 @@
 																<img src="assets/img/benefit.png" alt="">
 															</div>
 															<div class="cell">
-																<h2 class="benefits-blockTitle">Рассрочка при оплате услуг</h2>
+																<div class="benefits-blockTitle">Рассрочка при оплате услуг</div>
 															</div>
 														</div>
 													</div>
@@ -70,7 +70,7 @@
 																<img src="assets/img/benefit.png" alt="">
 															</div>
 															<div class="cell">
-																<h2 class="benefits-blockTitle">Гарантия победы в суде</h2>
+																<div class="benefits-blockTitle">Гарантия победы в суде</div>
 															</div>
 														</div>
 													</div>
@@ -82,7 +82,7 @@
 																<img src="assets/img/benefit.png" alt="">
 															</div>
 															<div class="cell">
-																<h2 class="benefits-blockTitle">Специализируемся только на долевом строительстве</h2>
+																<div class="benefits-blockTitle">Специализируемся только на долевом строительстве</div>
 															</div>
 														</div>
 													</div>
@@ -94,7 +94,7 @@
 																<img src="assets/img/benefit.png" alt="">
 															</div>
 															<div class="cell">
-																<h2 class="benefits-blockTitle">Только опытные юристы, никаких менеджеров по продажам</h2>
+																<div class="benefits-blockTitle">Только опытные юристы, никаких менеджеров по продажам</div>
 															</div>
 														</div>
 													</div>
@@ -106,10 +106,10 @@
 							</section>
 						</main>
 					</div>
-					<div class="cell large-4">
-						<div class="grid-x">
+					<div class="cell large-4" data-sticky-container>
+						<div class="grid-x" data-sticky data-margin-top="7" data-sticky-on="large" data-anchor="mainContentOnPage">
 							<aside class="about-sideBar">
-								//= ../partials/side-bar
+								//= ../partials/side-bar-full
 							</aside>
 						</div>
 					</div>

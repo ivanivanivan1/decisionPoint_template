@@ -1,4 +1,6 @@
 .benefits
+	@include breakpoint(small only)
+		text-align: center
 	&-title
 		font-size: 3.375rem
 		font-weight: bold
@@ -19,5 +21,8 @@
 		@media (max-width: 530px)
 			font-size: 1.2rem
 		@include breakpoint(medium down)
-			margin: 20px auto 0
+			margin: 20px 0 0
 			max-width: 300px
+		@include breakpoint(small only)
+			margin: 20px auto 0
+			padding-right: 0
