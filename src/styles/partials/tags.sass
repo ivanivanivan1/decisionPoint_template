@@ -1,0 +1,74 @@
+.siteTags
+	border: 1px solid hsl(210, 2%, 80%)
+	border-radius: 15px
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	padding: 40px 20px 40px 35px
+	@include breakpoint(large up)
+		padding: 30px 20px 30px 35px
+	@include breakpoint(medium down)
+		padding: 20px
+		padding-right: 20px
+	@include breakpoint(small only)
+		margin-top: 1rem
+		text-align: center
+	&-caption
+		color: black
+		font-size: 1.75rem
+		font-weight: bold
+		line-height: 2rem
+		margin: 0
+		@include breakpoint(medium down)
+			font-size: 1.625rem
+			line-height: 2rem
+		@include breakpoint(small only)
+			font-size: 1.5rem
+			line-height: 1.75rem
+	&-text
+		color: hsl(0, 0%, 41%)
+		font-size: 1.0625rem
+		line-height: 1.5rem
+		margin: 0.5rem 0 1rem
+		@include breakpoint(medium down)
+			font-size: 0.9375rem
+			line-height: 1.3125rem
+		@include breakpoint(small only)
+			font-size: 0.875rem
+			line-height: 1.25rem
+	&-tag
+		background: hsl(37, 100%, 65%)
+		border-radius: 10px
+		color: white
+		display: block
+		font-size: 0.875rem
+		font-weight: bold
+		margin-bottom: 5px
+		margin-right: 5px
+		padding: 11px 18px
+		transition: background .3s
+		&:hover,
+		&:active,
+		&:visited
+			color: white
+		&:hover
+			background: darken(hsl(37, 100%, 65%), 10)
+	&-moreTags
+		color: hsl(0, 0%, 41%)
+		display: inline-block
+		font-size: 0.875rem
+		font-weight: bold
+		margin-right: 10px
+		margin-top: 22px
+		text-align: center
+		text-decoration: none
+		text-transform: uppercase
+		&:hover,
+		&:active,
+		&:visited
+			color: hsl(0, 0%, 41%)
+		span
+			border-bottom: 1px solid hsl(0, 0%, 41%)
+			transition: border .3s
+			&:hover
+				border-bottom: 1px solid transparent
