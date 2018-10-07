@@ -245,15 +245,20 @@ function initMfp(where) {
 	})
 }
 function initAccordionCustomHandler(where) {
-	$(where).find('[ data-accordion-custom-handler]').on('mouseup', function (e) {
-		var itemId = $(this).siblings('[data-tab-content]').get(0).id
-		$(where).find('[data-accordion]').each((index, element) => {
-			var parent = element
-			$(parent).find('[data-tab-content]:visible').each((index, element) => {
+	$(where).find('[data-accordion-custom-handler]').on('mouseup', function (e) {
+		var item = $(this).closest('[data-accordion-item]')
+		var parent = $(item).parent('[data-accordion]')
+
+		$(item).find('[data-tab-content]').each((index, element) => {
+			var itemId = element.id
+
+			$('[data-custom-accordion-wrapper]').find('[data-tab-content]:visible').each((index, element) => {
 				if (itemId !== element.id) {
-					$(parent).foundation('up', $(element))
+					$(parent).removeAttr('disabled').foundation('up', $(element)).attr('disabled', '')
 				}
 			})
+
+			$(parent).removeAttr('disabled').foundation('toggle', $(element)).attr('disabled', '')
 		})
 	})
 }
