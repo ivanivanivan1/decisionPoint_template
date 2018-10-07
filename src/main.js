@@ -71,9 +71,9 @@ function initYandexMaps(where) {
 
 			var myPlacemark = new ymaps.Placemark(coords, {
 				// Хинт показывается при наведении мышкой на иконку метки.
-				hintContent: 'Нажмите, чтобы посмотреть контакты',
+				// hintContent: 'Нажмите, чтобы посмотреть контакты',
 				// Балун откроется при клике по метке.
-				balloonContent: '+7 (911) 123-45-67',
+				// balloonContent: '+7 (911) 123-45-67',
 				// iconContent: '12'
 			}, {
 				// Опции.
