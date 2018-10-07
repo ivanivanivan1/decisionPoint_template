@@ -59,6 +59,7 @@
 			width: 4px
 		@include breakpoint(small only)
 			padding: 10px 27px
+			padding-right: 55px
 	&-link
 		align-items: center
 		display: flex
@@ -116,13 +117,29 @@
 			transition: background .1s
 			&:hover
 				background: hsl(210, 11%, 96%)
-				a
+				#{$p}-contentLink
 					color: hsl(215, 58%, 38%)
 					span
 						border-bottom: 1px solid hsl(215, 58%, 38%)
-			a
-				color: hsl(210, 2%, 16%)
-				display: block
-				padding: 15px 20px
-				span
-					border-bottom: 1px solid transparent
+	&-contentLink
+		color: hsl(210, 2%, 16%)
+		display: block
+		padding: 15px 20px
+		span
+			border-bottom: 1px solid transparent
+	&-download
+		position: absolute
+		right: 15px
+		top: 50%
+		transform: translateY(-50%)
+		&:hover
+			i
+				background-image: url('../img/download_blue.svg')
+		i
+			background-image: url('../img/download.svg')
+			background-size: contain
+			content: ''
+			display: block
+			height: 16px
+			transition: background-image .3s
+			width: 16px

@@ -1,0 +1,38 @@
+.documents
+	&-content
+		margin-bottom: 30px
+		padding-top: 15px
+		@include breakpoint(medium down)
+			margin-bottom: 20px
+	&-title
+		color: black
+		font-size: 3.375rem
+		line-height: 3.875rem
+		margin: 0
+		padding: 0 0 25px
+		@include breakpoint(medium down)
+			font-size: 2.75rem
+			padding: 10px 0 0
+	&-text
+		color: hsl(0, 0%, 0%)
+		font-size: 1.125rem
+		line-height: 1.9375rem
+		@include breakpoint(medium down)
+			margin-bottom: 20px
+		@include breakpoint(small only)
+			margin-bottom: 10px
+	&-services
+		margin-bottom: 20px
+		padding-top: 0.5rem
+		@include breakpoint(small only)
+			margin-bottom: 10px
+	&-breadcrumbs
+		margin-top: 45px
+		@include breakpoint(medium down)
+			margin-top: 20px
+	.services
+		&-content
+			li
+				position: relative
+		&-contentLink
+			padding-right: 40px
