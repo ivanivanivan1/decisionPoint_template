@@ -40,13 +40,11 @@
 			font-size: 2rem
 			margin-bottom: 15px
 	&-block
-		align-items: center
 		background: hsl(210, 25%, 98%)
 		border: 1px solid hsl(204, 6%, 84%)
 		border-radius: 10px
-		display: flex
 		padding: 18px 27px
-		// padding-right: 40px
+		padding-right: 55px
 		position: relative
 		transition: background .3s, margin-bottom .3s, border-radius .3s, box-shadow .3s
 		&::before
@@ -62,7 +60,8 @@
 		@include breakpoint(small only)
 			padding: 10px 27px
 	&-link
-		margin-right: 7px
+		align-items: center
+		display: flex
 	&-blockTitle
 		color: hsl(210, 2%, 16%)
 		font-size: 1.125rem
@@ -80,7 +79,10 @@
 		display: block
 		height: 32px
 		min-width: 32px
-		position: relative
+		position: absolute
+		right: 17px
+		top: 50%
+		transform: translateY(-50%)
 		transition: border .3s
 		width: 32px
 		&::after
