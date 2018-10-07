@@ -6,6 +6,9 @@
 	height: 18px
 	position: relative
 	width: 23px
+	&::after
+		border-bottom: 1px dashed transparent
+		transition: border-bottom .3s
 	@include breakpoint(medium up)
 		display: none
 	@media (max-width: 580px)
@@ -23,6 +26,9 @@
 	.bar-bot
 		margin-bottom: 0
 	&_open
+		&::after
+			border-bottom: 1px dashed gray
+			font-weight: bold
 		.bar-bot
 			transform: rotate(-45deg)
 			transform-origin: 10% 95%
