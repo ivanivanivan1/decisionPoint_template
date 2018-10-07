@@ -13,14 +13,13 @@
 		transform: rotate(-135deg)
 		width: 15px
 	@include breakpoint(medium down)
-		&::after
-			display: none
-	@include breakpoint(small only)
 		text-align: center
 		.buttonPhone,
 		.buttonSubmit
 			margin-left: auto
 			margin-right: auto
+		&::after
+			display: none
 	&-main
 		border: 1px solid hsl(221, 44%, 41%)
 		border-radius: 15px
@@ -57,7 +56,7 @@
 		border-color: hsl(221, 31%, 53%)
 		margin-bottom: 0
 		text-align: left
-		@include breakpoint(small only)
+		@include breakpoint(medium down)
 			text-align: center
 		@media (max-width: 510px)
 			margin-bottom: 10px
@@ -70,9 +69,9 @@
 			display: block
 			width: 100%
 	.buttonSubmit
-		@include breakpoint(medium up)
+		@include breakpoint(large up)
 			margin-left: 10px
-		@include breakpoint(medium only)
-			margin-left: 0
+		// @include breakpoint(medium only)
+		// 	margin-left: 0
 		@include breakpoint(medium down)
 			margin-top: 10px
