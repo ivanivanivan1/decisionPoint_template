@@ -59,8 +59,8 @@ Foundation.plugin(Accordion, 'Accordion');
 //  import { Dropdown } from 'foundation-sites/js/foundation.dropdown';
 //  Foundation.plugin(Dropdown, 'Dropdown');
 
-// import { DropdownMenu } from 'foundation-sites/js/foundation.dropdownMenu';
-// Foundation.plugin(DropdownMenu, 'DropdownMenu');
+import { DropdownMenu } from 'foundation-sites/js/foundation.dropdownMenu';
+Foundation.plugin(DropdownMenu, 'DropdownMenu');
 
 import { Equalizer } from 'foundation-sites/js/foundation.equalizer';
 Foundation.plugin(Equalizer, 'Equalizer');
