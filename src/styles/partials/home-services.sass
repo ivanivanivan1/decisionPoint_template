@@ -13,7 +13,7 @@
 				background: white
 		#{$p}-blockTitle
 			color: white
-			font-weight: bold
+			// font-weight: bold
 		#{$p}-blockToggler
 			border: 1px solid transparent
 			&::after
@@ -24,11 +24,12 @@
 		#{$p}-block
 			&:hover
 				box-shadow: 0 0 20px 1px hsla(0, 0%, 0%, 0.1)
-				#{$p}-blockTitle
-					color: hsl(221, 44%, 41%)
-					font-weight: bold
-					span
-						border-bottom: 1px solid hsl(221, 44%, 41%)
+		#{$p}-blockTitle
+			&:hover
+				color: hsl(221, 44%, 41%)
+				// font-weight: bold
+				span
+					border-bottom: 1px solid hsl(221, 44%, 41%)
 	&-title
 		font-size: 3.375rem
 		font-weight: bold
