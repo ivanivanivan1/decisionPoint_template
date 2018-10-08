@@ -1,0 +1,55 @@
+.document
+	&-content
+		margin-bottom: 30px
+		padding-top: 15px
+		@include breakpoint(medium down)
+			margin-bottom: 20px
+	&-title
+		color: black
+		font-size: 3.375rem
+		line-height: 3.875rem
+		margin: 0
+		padding: 0 0 10px
+		@include breakpoint(medium down)
+			font-size: 2.75rem
+			padding: 10px 0
+	&-link
+		color: hsl(221, 44%, 41%)
+		padding-right: 10px
+		position: relative
+		span
+			border-bottom: 1px solid hsl(221, 44%, 41%)
+			transition: border-bottom .3s
+		&:hover
+			color: hsl(221, 44%, 41%)
+			span
+				border-bottom: 1px solid transparent
+		&:active,
+		&:visited
+			color: hsl(221, 44%, 41%)
+		&::after
+			background-image: url('../img/download.svg')
+			background-size: contain
+			content: ''
+			display: inline-block
+			height: 16px
+			position: relative
+			right: -10px
+			top: 4px
+			width: 16px
+		@media (max-width: 520px)
+			&::after
+				display: none
+	&-text
+		color: hsl(0, 0%, 0%)
+		font-size: 1.125rem
+		line-height: 1.9375rem
+		margin-top: 25px
+		@include breakpoint(medium down)
+			margin-bottom: 20px
+		@include breakpoint(small only)
+			margin-bottom: 10px
+	&-breadcrumbs
+		margin-top: 45px
+		@include breakpoint(medium down)
+			margin-top: 20px
