@@ -8,25 +8,11 @@
 		line-height: 1.6875rem
 		padding-top: 7px
 		text-align: center
-	&-grid
-		$gutter-size: 15
-		$grid-margin-gutters: (small: $gutter-size, medium: $gutter-size, large: $gutter-size)
-		@include xy-grid('horizontal')
-		@include xy-grid-layout(4, '.siteInner-cell', true, $grid-margin-gutters, 'margin', ('right', 'left', 'bottom', 'top'))
-		@include xy-gutters($gutter-size, 'margin', $negative: true)
-
-		@include breakpoint(medium only)
-			@include xy-grid-layout(3, '.siteInner-cell', true, $grid-margin-gutters, 'margin', ('right', 'left', 'bottom', 'top'))
-		@media (max-width: 900px)
-			@include xy-grid-layout(2, '.siteInner-cell', true, $grid-margin-gutters, 'margin', ('right', 'left', 'bottom', 'top'))
-		@include breakpoint(small only)
-			@include xy-grid-layout(1, '.siteInner-cell')
 	&-content
 		margin-bottom: 30px
 		padding-top: 20px
 		@include breakpoint(medium down)
 			margin-bottom: 20px
-			// padding-top: 20px
 	&-title
 		color: black
 		font-size: 3.375rem
@@ -38,8 +24,6 @@
 			padding-bottom: 10px
 		@include breakpoint(small only)
 			text-align: center
-	&-topTitle
-		padding-top: 20px
 	&-text
 		color: hsl(0, 0%, 0%)
 		font-size: 1.125rem
@@ -48,8 +32,6 @@
 			margin-bottom: 20px
 		@include breakpoint(small only)
 			margin-bottom: 10px
-	&-benefits
-		padding-top: 4.375rem
 	&-breadcrumbs
 		margin-top: 45px
 		@include breakpoint(medium down)
