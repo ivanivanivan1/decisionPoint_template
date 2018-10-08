@@ -1,0 +1,56 @@
+.siteMenu
+	background-color: $secondary-color
+	border: 1px solid hsl(210, 2%, 80%) !important
+	left: 0 !important
+	list-style: none
+	margin: 0
+	padding: 0
+	position: absolute
+	top: 100%
+	width: 100%
+	@include breakpoint(medium down)
+		display: none !important
+	&-item
+		@include breakpoint(large up)
+			// align-items: center
+			background-color: $secondary-color
+			// border-bottom: 1px solid hsl(210, 2%, 80%)
+			// display: flex
+			position: relative
+			transition: background-color .3s
+			&>a
+				align-items: center
+				display: flex
+				font-size: 0.85rem
+				font-weight: bold
+				height: 100%
+				line-height: 1.075rem
+				padding: 10px 20px
+				text-transform: uppercase
+				transition: color .3s
+				width: 100%
+			&.is-dropdown-submenu-parent
+				&>a
+					&::after
+						border: 1px solid $primary-color !important
+						border-width: 0 0 2px 2px !important
+						content: '' !important
+						display: block !important
+						height: 8px !important
+						transform: rotateZ(-135deg) !important
+						width: 8px !important
+			&:hover
+				background-color: darken($secondary-color, 10)
+				&>a
+					color: darken($primary-color, 30)
+			// &:not(&_short)
+			// 	#{$p}-item:nth-child(2n)
+			// 		border-left: 1px solid hsl(210, 2%, 80%)
+	&_submenu
+		left: 100% !important
+		top: 0 !important
+		// width: 300px
+	// &_short
+	// 	width: 300px
+	&.is-dropdown-submenu.js-dropdown-active
+		display: flex

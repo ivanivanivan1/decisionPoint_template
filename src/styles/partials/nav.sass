@@ -1,4 +1,5 @@
 .siteNav
+	$p: &
 	background: $secondary-color
 	transition: transform .15s
 	@include breakpoint (small only)
@@ -7,52 +8,85 @@
 		transform-origin: top
 		width: 100%
 	@include breakpoint (medium up)
-		border-bottom: 1px solid hsl(210, 2%, 80%)
+		border-bottom: 1px solid hsl(0, 0%, 84%)
 	&_open
 		transform: scaleY(1)
 		width: 100%
 	&-menu
 		display: flex
 		list-style: none
-		margin: 1.75rem 0
+		margin: 1rem 0
 		padding: 0
-		li
-			a
-				border-bottom: 1px solid transparent
-				color: hsl(221, 44%, 41%)
-				font: bold 0.875rem PT Sans
-				transition: color .3s, border-bottom .2s
-				text-transform: uppercase
-				&:hover
-					border-bottom: 1px solid hsl(221, 44%, 41%)
-					color: darken(hsl(221, 44%, 41%), 20)
-		li + li
-			margin-left: 50px
-		@include breakpoint(medium down)
-			li + li
-				margin-left: 20px
 		@include breakpoint(small only)
 			flex-direction: column
 			margin: 0
-			li
-				border-top: 1px solid hsl(210, 2%, 80%)
+	&-menuItem
+		&>a
+			border-bottom: 1px solid transparent
+			color: hsl(221, 44%, 41%)
+			font: bold 0.875rem PT Sans
+			transition: color .3s, border-bottom .2s
+			text-transform: uppercase
+			&:hover
+				border-bottom: 1px solid hsl(221, 44%, 41%)
+				color: darken(hsl(221, 44%, 41%), 20)
+			@include breakpoint(small only)
+				color: hsl(221, 44%, 41%)
 				display: block
-				&:first-child
-					border-top: none
-				&:last-child
-					border-bottom: 1px solid hsl(210, 2%, 80%)
-				a
-					color: hsl(221, 44%, 41%)
-					display: block
-					padding: 0.65rem 0.9375rem
-					transition: none
-					&:hover
-						border-bottom: 1px solid transparent
-						color: hsl(221, 44%, 41%)
+				padding: 0.65rem 0.9375rem
+				transition: none
 				&:hover
-					background-color: hsl(217, 12%, 87%)
-			li + li
-				margin: 0
+					border-bottom: 1px solid transparent
+					color: hsl(221, 44%, 41%)
+		&:hover
+			@include breakpoint(small only)
+				background-color: hsl(217, 12%, 87%)
+		&.is-dropdown-submenu-parent
+			position: static
+			@include breakpoint(large up)
+				&>a
+					position: relative
+					&::after
+						border: 1px solid $primary-color
+						border-width: 0 0 2px 2px
+						content: ''
+						display: block
+						height: 8px
+						position: absolute
+						right: -14px
+						top: 50%
+						transform: rotateZ(-45deg)
+						width: 8px
+		&_short
+			position: relative !important
+			&>.siteMenu
+				margin-top: 17px
+				min-width: 310px
+				@media (min-width: 1100px)
+					min-width: 330px
+				@media (min-width: 1200px)
+					min-width: 365px
+	&-menuItem + &-menuItem
+		margin-left: 50px
+		@include breakpoint(medium down)
+			margin-left: 20px
+		@include breakpoint(small only)
+			border-top: 1px solid hsl(210, 2%, 80%)
+			display: block
+			flex-direction: column
+			margin: 0
+			&:first-child
+				border-top: none
+			&:last-child
+				border-bottom: 1px solid hsl(210, 2%, 80%)
+			// &>a
+			// 	color: hsl(221, 44%, 41%)
+			// 	display: block
+			// 	padding: 0.65rem 0.9375rem
+			// 	transition: none
+			// 	&:hover
+			// 		border-bottom: 1px solid transparent
+			// 		color: hsl(221, 44%, 41%)
 .siteHeader-wrapper.is-stuck
 	.siteNav
 		&-menu

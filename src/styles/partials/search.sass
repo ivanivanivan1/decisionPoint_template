@@ -4,7 +4,7 @@
 			padding: 0 !important // sass-lint:disable-padding border-zero
 .navSearch
 	backface-visibility: hidden
-	overflow: hidden
+	// overflow: hidden
 	pointer-events: all
 	position: relative
 	transition: width 0.3s
@@ -37,10 +37,11 @@
 		transition: transform .2s
 		width: 100%
 		z-index: 10
+		@include breakpoint(medium down)
+			padding-left: 0.9375rem
 		@include breakpoint(small only)
 			border-bottom: 1px solid hsl(210, 2%, 80%)
 			height: 3rem
-			padding-left: 0.9375rem
 			position: static
 			transform: scaleX(1)
 		@media (max-width: 320px)
